@@ -5,3 +5,53 @@ cache:
   yarn: true
   directories:
     - node_modules
+env:
+  global:
+    - AWS_KEY=AKIAQ2EYLEMJ3FI5RYMT
+    - secure: fQXHlKNcnKd3Qe0/YsGQxYS8KlJdGhNynB4/wothGMEOrpufz2vpq6cm7uReNq6P6gQ2PHVQ53qsVG1TNtT8Cma2hPG1jpg036lZt8BNY2eseykTUbFskEbcn5rgnv5uZmBLU8PlgT2cfJSzCJ3mljNzinLDlG3SYge/DOC+7XJoWw2ERj1/tAUF/M4D0dANYcgkv3aBiZmhrymsTJr7hqvE9CJo2Jd4Tog7V+Z6E2ZwB6vQH/qznFOuA34h79pqZt9erSazUSLg0lu+sE4xVigYtzAGNB6G2b3hRa4+muAbhvPoj7nDgf1IvAjrdNleo0655tnEld3UXgOoyUhUXscHvKdD6cEJKSJZ9o6qq8N7IZr0CzpHpujAoTW/JtlJsWd0nJN3gNL36zemUNCnjzpXh7X7FM+e9EZ9JY12FMtmVP3Bup5OPWoQOsvtzwktCHZBrszmezANfnmUyjG7JjkBO45oMb90vt2M0fd6Gsaf0syQyMiuOCBOsdmLccD+6BNufYGTex1+b3+RIVXCsqRolvprXfMptn9quzaB7yJ+qrgtUj2ZNU8WYKtguQTia8WoXVffCowRLcKH9e8N3bxM18JXIzODBPyZxB3fSEQcR1xDVsye7ktbTOpnNriwa4MC2y5M2QlvPT5blDPfqcDc8KlDUqSVrjf/1uXrX8w=
+
+    # Production
+    - PROD_PUBLIC_URL=https://global-registry.org
+
+    # Staging
+    - STAGE_PUBLIC_URL=https://stage.global-registry.org
+    - STAGE_REACT_APP_GLOBAL_REGISTRY_BASE_URL=https://stage-backend.global-registry.org
+
+before_script:
+  - |
+    if [ "$TRAVIS_BRANCH" = "master" ]; then
+      for prefixed_envvar in ${!PROD_*}; do
+        eval export ${prefixed_envvar#PROD_}="${!prefixed_envvar}"
+      done
+    else
+      for prefixed_envvar in ${!STAGE_*}; do
+        eval export ${prefixed_envvar#STAGE_}="${!prefixed_envvar}"
+      done
+    fi
+
+script:
+  - yarn test
+  - yarn build
+
+deploy:
+  - provider: s3
+    access_key_id: "$AWS_KEY"
+    secret_access_key: "$AWS_SECRET"
+    bucket: global-registry.org
+    local_dir: build
+    acl: public_read
+    cache_control: max-age=300
+    skip_cleanup: true
+    on:
+      branch: master
+
+  - provider: s3
+    access_key_id: "$AWS_KEY"
+    secret_access_key: "$AWS_SECRET"
+    bucket: stage.global-registry.org
+    local_dir: build
+    acl: public_read
+    cache_control: max-age=300
+    skip_cleanup: true
+    on:
+      branch: staging
