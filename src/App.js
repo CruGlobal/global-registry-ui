@@ -6,12 +6,11 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import AppFrame from './layout/AppFrame'
 import routes from './routes'
 import { SnackbarProvider } from 'notistack'
+import { Provider } from 'react-redux'
+import store, { history } from './redux/store'
+import { ConnectedRouter } from 'connected-react-router'
 
 const theme = createMuiTheme({
-  // palette: {
-  //   primary: teal,
-  //   secondary: blue,
-  // },
   typography: {
     useNextVariants: true
   }
@@ -23,25 +22,29 @@ const styles = theme => ({
   }
 })
 
-class App extends React.Component {
+export class App extends React.Component {
   render () {
-    const { classes } = this.props
+    const {classes} = this.props
     return (
-      <MuiThemeProvider theme={theme}>
-        <div className={classes.root}>
-          <CssBaseline />
-          <SnackbarProvider maxSnack={3} anchorOrigin={{
-            vertical: 'top',
-            horizontal: 'center'
-          }}>
-            <AppFrame>
-              <Switch>
-                {routes.map(({ icon, label, ...route }, index) => label ? <Route key={index} {...route} /> : null)}
-              </Switch>
-            </AppFrame>
-          </SnackbarProvider>
-        </div>
-      </MuiThemeProvider>
+      <Provider store={store}>
+        <ConnectedRouter history={history}>
+          <MuiThemeProvider theme={theme}>
+            <div className={classes.root}>
+              <CssBaseline/>
+              <SnackbarProvider maxSnack={3} anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'center'
+              }}>
+                <AppFrame>
+                  <Switch>
+                    {routes.map(({icon, label, ...route}, index) => label ? <Route key={index} {...route} /> : null)}
+                  </Switch>
+                </AppFrame>
+              </SnackbarProvider>
+            </div>
+          </MuiThemeProvider>
+        </ConnectedRouter>
+      </Provider>
     )
   }
 }
