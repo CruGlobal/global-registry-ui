@@ -1,28 +1,53 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
+import { Route, Switch } from 'react-router-dom'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import AppFrame from './layout/AppFrame'
+import routes from './routes'
+import { SnackbarProvider } from 'notistack'
 
-class App extends Component {
-  render() {
+const theme = createMuiTheme({
+  // palette: {
+  //   primary: teal,
+  //   secondary: blue,
+  // },
+  typography: {
+    useNextVariants: true
+  }
+})
+
+const styles = theme => ({
+  root: {
+    display: 'flex'
+  }
+})
+
+class App extends React.Component {
+  render () {
+    const { classes } = this.props
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <MuiThemeProvider theme={theme}>
+        <div className={classes.root}>
+          <CssBaseline />
+          <SnackbarProvider maxSnack={3} anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'center'
+          }}>
+            <AppFrame>
+              <Switch>
+                {routes.map(({ icon, label, ...route }, index) => label ? <Route key={index} {...route} /> : null)}
+              </Switch>
+            </AppFrame>
+          </SnackbarProvider>
+        </div>
+      </MuiThemeProvider>
+    )
   }
 }
 
-export default App;
+App.propTypes = {
+  classes: PropTypes.object.isRequired
+}
+
+export default withStyles(styles)(App)

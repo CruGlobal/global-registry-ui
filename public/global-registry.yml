@@ -1,0 +1,1044 @@
+openapi: 3.0.0
+info:
+  title: Global Registry
+  version: 1.0.0
+externalDocs:
+  description: Global Registry Documentation
+  url: https://github.com/CruGlobal/global_registry_docs/wiki
+servers:
+  - url: https://backend.global-registry.org
+    description: Production
+  - url: https://stage-backend.global-registry.org
+    description: Staging
+paths:
+  /systems:
+    get:
+      summary: List all Systems
+      operationId: getSystems
+      tags:
+        - systems
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            format: int32
+            default: 300
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  systems:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/System'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    post:
+      summary: Create new System
+      operationId: createSystem
+      tags:
+        - systems
+      parameters:
+        - name: full_response
+          in: query
+          schema:
+            type: boolean
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                system:
+                  $ref: '#/components/schemas/CreateSystem'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  system:
+                    $ref: '#/components/schemas/System'
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  system:
+                    $ref: '#/components/schemas/System'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  '/systems/{id}':
+    get:
+      summary: Info for a specific System
+      operationId: getSystem
+      tags:
+        - systems
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  system:
+                    $ref: '#/components/schemas/System'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    put:
+      summary: Update a specific System
+      operationId: updateSystem
+      tags:
+        - systems
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: full_response
+          in: query
+          schema:
+            type: boolean
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                system:
+                  $ref: '#/components/schemas/System'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  system:
+                    $ref: '#/components/schemas/System'
+    delete:
+      summary: Delete a specific System
+      operationId: deleteSystem
+      tags:
+        - systems
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  system:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        format: uuid
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  /systems/reset_access_token:
+    post:
+      summary: Reset a Systems Access Token
+      operationId: resetSystemAccessToken
+      tags:
+        - systems
+      parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  system:
+                    $ref: '#/components/schemas/System'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  '/entity_types':
+    get:
+      summary: List all Entity Types
+      operationId: getEntityTypes
+      tags:
+        - entity_types
+      parameters:
+        - name: per_page
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: filters
+          in: query
+          style: deepObject
+          explode: true
+          schema:
+            type: object
+            properties:
+              parent_id:
+                type: string
+                format: uuid
+              updated_at:
+                type: string
+                format: date-time
+              created_at:
+                type: string
+                format: date-time
+              name:
+                type: string
+              data_visibility:
+                type: string
+                enum: [public, private, shared_ownership]
+              is_editable:
+                type: boolean
+              unique_value:
+                type: boolean
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  entity_types:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/EntityType'
+                  meta:
+                    $ref: '#/components/schemas/PagedMeta'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    post:
+      summary: Create new Entity Type
+      operationId: createEntityType
+      tags:
+        - entity_types
+      requestBody:
+        description: Entity Type to add
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                entity_type:
+                  $ref: '#/components/schemas/CreateEntityType'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  entity_type:
+                    $ref: '#/components/schemas/EntityType'
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  entity_type:
+                    $ref: '#/components/schemas/EntityType'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  '/entity_types/{id}':
+    get:
+      summary: Info for a specific Entity Type
+      operationId: getEntityType
+      tags:
+        - entity_types
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  entity_type:
+                    $ref: '#/components/schemas/EntityType'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    put:
+      summary: Update a specific Entity Type
+      operationId: updateEntityType
+      tags:
+        - entity_types
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                entity_type:
+                  $ref: '#/components/schemas/EntityType'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  entity_type:
+                    $ref: '#/components/schemas/EntityType'
+
+  /measurement_types:
+    get:
+      summary: List all Measurement Types
+      operationId: getMeasurementTypes
+      tags:
+        - measurement_types
+      parameters:
+        - name: per_page
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: page
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: filters
+          in: query
+          style: deepObject
+          explode: true
+          schema:
+            type: object
+            properties:
+              related_entity_type_id:
+                type: string
+                format: uuid
+              name:
+                type: string
+              perm_link:
+                type: string
+              is_editable:
+                type: boolean
+              unit:
+                type: string
+              frequency:
+                type: string
+              description:
+                type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  measurement_types:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MeasurementType'
+                  meta:
+                    $ref: '#/components/schemas/PagedMeta'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    post:
+      summary: Create New Measurement Type
+      operationId: createMeasurementType
+      tags:
+        - measurement_types
+      requestBody:
+        description: New Measurement Type
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                measurement_type:
+                  $ref: '#/components/schemas/CreateMeasurementType'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  measurement_type:
+                    $ref: '#/components/schemas/MeasurementType'
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  measurement_type:
+                    $ref: '#/components/schemas/MeasurementType'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  '/measurement_types/{id}':
+    put:
+      summary: Update a specific Measurement Type
+      operationId: updateMeasurementType
+      tags:
+        - measurement_types
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                measurement_type:
+                  $ref: '#/components/schemas/MeasurementType'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  measurement_type:
+                    $ref: '#/components/schemas/MeasurementType'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /relationship_types:
+    post:
+      summary: Create New Relationship Type
+      description: See https://github.com/CruGlobal/global_registry_docs/wiki/Create-New-Relationship-Type
+      operationId: createRelationshipType
+      tags:
+        - relationship_types
+      requestBody:
+        description: New Relationship Type
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                relationship_type:
+                  $ref: '#/components/schemas/CreateRelationshipType'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  relationship_type:
+                    $ref: '#/components/schemas/RelationshipType'
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  relationship_type:
+                    $ref: '#/components/schemas/RelationshipType'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  '/relationship_types/{id}':
+    put:
+      summary: Update a specific Relationship Type
+      operationId: updateRelationshipType
+      tags:
+        - relationship_types
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                relationship_type:
+                  $ref: '#/components/schemas/CreateRelationshipType'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  relationship_type:
+                    $ref: '#/components/schemas/RelationshipType'
+
+  /systems/trust_relationships:
+    get:
+      summary: List all Trust Relationships
+      description: See https://github.com/CruGlobal/global_registry_docs/wiki/Trust-Relationships#list
+      operationId: getTrustRelationships
+      tags:
+        - trust_relationships
+      parameters:
+        - name: source_system_id
+          in: query
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  trust_relationships:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TrustRelationship'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    post:
+      summary: Create a new Trust Relationship
+      description: See https://github.com/CruGlobal/global_registry_docs/wiki/Trust-Relationships#create
+      operationId: createTrustRelationship
+      tags:
+        - trust_relationships
+      parameters:
+        - name: full_response
+          in: query
+          schema:
+            type: boolean
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trust_relationship:
+                  $ref: '#/components/schemas/CreateTrustRelationship'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  trust_relationship:
+                    $ref: '#/components/schemas/TrustRelationship'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  '/systems/trust_relationships/{id}':
+    delete:
+      summary: Delete a Trust Relationship
+      operationId: deleteTrustRelationship
+      tags:
+        - trust_relationships
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  trust_relationship:
+                    $ref: '#/components/schemas/TrustRelationship'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /subscriptions:
+    get:
+      summary: List all Subscriptions belonging to currently authenticated system
+      description: https://github.com/CruGlobal/global_registry_docs/wiki/Subscriptions-API
+      operationId: getSubscriptions
+      tags:
+        - subscriptions
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  subscriptions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Subscription'
+                  meta:
+                    $ref: '#/components/schemas/PagedMeta'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    post:
+      summary: Create a new Subscription
+      description: https://github.com/CruGlobal/global_registry_docs/wiki/Subscriptions-API#subscription
+      operationId: createSubscription
+      tags:
+        - subscriptions
+      parameters:
+        - name: full_response
+          in: query
+          schema:
+            type: boolean
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                subscription:
+                  $ref: '#/components/schemas/CreateSubscription'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  subscription:
+                    $ref: '#/components/schemas/Subscription'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  '/subscriptions/{id}':
+    delete:
+      summary: Delete a Subscription
+      operationId: deleteSubscription
+      tags:
+        - subscriptions
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  subscription:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        format: uuid
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: access_token
+    queryAuth:
+      type: apiKey
+      in: query
+      name: access_token
+
+  responses:
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+    NotFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  schemas:
+    CreateEntityType:
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          pattern: '\A[a-z][a-z0-9_-]+\z'
+          description: 'Name must start with a letter and contain only lowercase letters, dashes, and underscores'
+        field_type:
+          type: string
+          default: entity
+          enum: [boolean, email, string, datetime, decimal, integer, enum, text, entity, enum_values, uuid, float, date]
+        parent_id:
+          type: string
+          format: uuid
+          description: 'Parent EntityType uuid, or missing for root EntityType'
+        data_visibility:
+          type: string
+          enum: [public, private, shared_ownership]
+          default: public
+        description:
+          type: string
+        unique_value:
+          type: boolean
+          default: false
+
+    EntityType:
+      allOf:
+        - $ref: '#/components/schemas/CreateEntityType'
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            is_editable:
+              type: boolean
+            fields:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityType'
+            relationships:
+              type: array
+              items:
+                type: object
+                properties:
+                  relationship_type:
+                    $ref: '#/components/schemas/RelationshipType'
+
+    CreateRelationshipType:
+      required:
+        - entity_type1_id
+        - entity_type2_id
+        - relationship1
+        - relationship2
+      properties:
+        entity_type1_id:
+          type: string
+          format: uuid
+        entity_type2_id:
+          type: string
+          format: uuid
+        relationship1:
+          type: string
+          pattern: '\A[a-z][a-z0-9_-]+\z'
+        relationship2:
+          type: string
+          pattern: '\A[a-z][a-z0-9_-]+\z'
+        fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CreateEntityType'
+
+    RelationshipType:
+      properties:
+        id:
+          type: string
+          format: uuid
+        relationship_entity_type_id:
+          type: string
+          format: uuid
+        relationship1:
+          type: object
+          properties:
+            entity_type_id:
+              type: string
+              format: uuid
+            entity_type:
+              type: string
+              pattern: '\A[a-z][a-z0-9_-]+\z'
+            relationship_name:
+              type: string
+              pattern: '\A[a-z][a-z0-9_-]+\z'
+        relationship2:
+          type: object
+          properties:
+            entity_type_id:
+              type: string
+              format: uuid
+            entity_type:
+              type: string
+              pattern: '\A[a-z][a-z0-9_-]+\z'
+            relationship_name:
+              type: string
+              pattern: '\A[a-z][a-z0-9_-]+\z'
+        fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/EntityType'
+
+    CreateMeasurementType:
+      required:
+        - name
+        - perm_link
+        - related_entity_type_id
+        - frequency
+        - unit
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        perm_link:
+          type: string
+        tag:
+          type: string
+        frequency:
+          type: string
+        unit:
+          type: string
+        related_entity_type_id:
+          type: string
+          format: uuid
+
+    MeasurementType:
+      allOf:
+        - $ref: '#/components/schemas/CreateMeasurementType'
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            is_editable:
+              type: boolean
+            measurements:
+              type: array
+              items:
+                type: object
+
+    CreateSystem:
+      required:
+        - name
+      properties:
+        name:
+          type: string
+        associated_ministry_entity_id:
+          type: string
+          format: uuid
+        contact_name:
+          type: string
+        contact_email:
+          type: string
+          format: email
+        trusted_ips:
+          type: array
+          items:
+            type: string
+            format: ipv4
+        root:
+          type: boolean
+          default: false
+        is_trusted:
+          type: boolean
+          default: false
+
+    System:
+      allOf:
+        - $ref: '#/components/schemas/CreateSystem'
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            access_token:
+              type: string
+              format: password
+            permalink:
+              type: string
+            created_at:
+              type: string
+              format: date-time
+            updated_at:
+              type: string
+              format: date-time
+
+    CreateTrustRelationship:
+      required:
+        - trusted_system_id
+      properties:
+        trusted_system_id:
+          type: string
+          format: uuid
+          description: |
+            Id of the system that you want to grant full read-only access to.
+            You can obtain this id by querying the /systems endpoint.
+        source_system_id:
+          type: string
+          format: uuid
+          description: |
+            If a root system is sending this request it can optionally specify the source_system_id as well
+            to create a trust relationship on behalf of another system.
+
+    TrustRelationship:
+      allOf:
+        - $ref: '#/components/schemas/CreateTrustRelationship'
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+
+    CreateSubscription:
+      required:
+        - entity_type_id
+        - endpoint
+      properties:
+        entity_type_id:
+          type: string
+          format: uuid
+        endpoint:
+          type: string
+          format: uri
+        format:
+          type: string
+          default: json
+          enum: [json, xml]
+
+    Subscription:
+      allOf:
+        - $ref: '#/components/schemas/CreateSubscription'
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            system_id:
+              type: string
+              format: uuid
+            confirmed:
+              type: boolean
+
+    PagedMeta:
+      properties:
+        page:
+          type: integer
+        next_page:
+          type: boolean
+        from:
+          type: integer
+        to:
+          type: integer
+
+security:
+  - bearerAuth: []
+  - queryAuth: []
