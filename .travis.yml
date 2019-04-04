@@ -24,8 +24,11 @@ before_script:
     fi
 
 script:
-  - yarn test
+  - yarn test --coverage
   - yarn build
+
+after_success:
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
 
 deploy:
   - provider: s3
