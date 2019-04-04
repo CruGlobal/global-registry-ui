@@ -1,7 +1,7 @@
 import React from 'react'
 import SwaggerUi, { presets } from 'swagger-ui'
 import 'swagger-ui/dist/swagger-ui.css'
-import { OpenAPISpec } from '../global-registry/client'
+import { OpenAPISpec } from '../global-registry/global-registry-client'
 
 class APIExplorer extends React.Component {
   componentDidMount () {

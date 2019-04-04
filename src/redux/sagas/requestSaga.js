@@ -5,7 +5,7 @@ import {
   REQUEST_END,
   REQUEST_ERROR, USER_LOGIN_SUCCESS
 } from '../actionTypes'
-import GlobalRegistry, { clientOptions } from '../../global-registry/client'
+import GlobalRegistryClient, { clientOptions } from '../../global-registry/global-registry-client'
 
 const performRequest = (client, { operationId, tag, parameters, ...options }) => {
   return client.apis[tag][operationId](parameters, { ...clientOptions, ...options }).then(response => {
@@ -21,7 +21,7 @@ function * handleRequest (action) {
   } = action
 
   try {
-    const client = yield GlobalRegistry
+    const client = yield GlobalRegistryClient
     yield all([
       put({ type: `${type}_LOADING`, payload, meta }),
       put({ type: REQUEST_START, payload, meta })

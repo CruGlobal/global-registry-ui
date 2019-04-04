@@ -1,11 +1,11 @@
 import { takeEvery, call, put } from 'redux-saga/effects'
 import { USER_LOGIN, USER_LOGIN_FAILURE, USER_LOGIN_LOADING, USER_LOGIN_SUCCESS } from '../actionTypes'
 import { ACCESS_TOKEN } from '../../constants'
-import GlobalRegistry, { clientOptions } from '../../global-registry/client'
+import GlobalRegistryClient, { clientOptions } from '../../global-registry/global-registry-client'
 
 const SELF_SYSTEM_ID = '00000000-0000-0000-0000-000000000000'
 
-const login = (accessToken) => GlobalRegistry.then(client => {
+const login = (accessToken) => GlobalRegistryClient.then(client => {
   return client
     .apis
     .systems

@@ -18,12 +18,12 @@ export const clientOptions = {
   server: process.env.REACT_APP_GLOBAL_REGISTRY_BASE_URL
 }
 
-export default Swagger({
+export const GlobalRegistryClient = Swagger({
   // OpenAPI spec is loaded from /public
-  url: OpenAPISpec,
+  url: `${process.env.PUBLIC_URL}${OpenAPISpec}`,
   requestInterceptor: req => {
     // Don't mess with request for openapi spec
-    if (req.url === OpenAPISpec) return req
+    if (req.url === `${process.env.PUBLIC_URL}${OpenAPISpec}`) return req
 
     // Set Authorization header if not present
     if (typeof req.headers['Authorization'] === 'undefined') {
@@ -38,3 +38,5 @@ export default Swagger({
     return req
   }
 })
+
+export default GlobalRegistryClient
