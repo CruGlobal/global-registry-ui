@@ -2,18 +2,24 @@ import {
   USER_LOGIN_DEFAULT,
   USER_LOGIN_LOADING,
   USER_LOGIN_SUCCESS,
-  USER_LOGIN_FAILURE
+  USER_LOGIN_FAILURE,
+  APPLICATION_INIT
 } from '../actionTypes'
 import { ACCESS_TOKEN } from '../../constants'
 
 const initialState = {
-  accessToken: localStorage.getItem(ACCESS_TOKEN),
+  accessToken: null,
   system: {},
   loginState: USER_LOGIN_DEFAULT
 }
 
-const authentication = (state = initialState, { type, accessToken, system }) => {
+const authentication = (state = initialState, {type, accessToken, system}) => {
   switch (type) {
+    case APPLICATION_INIT:
+      return {
+        ...state,
+        accessToken: localStorage.getItem(ACCESS_TOKEN) || state.accessToken
+      }
     case USER_LOGIN_DEFAULT:
     case USER_LOGIN_LOADING:
     case USER_LOGIN_FAILURE:
@@ -23,8 +29,9 @@ const authentication = (state = initialState, { type, accessToken, system }) => 
       }
     case USER_LOGIN_SUCCESS:
       return {
-        accessToken: accessToken || state.accessToken,
-        system: system || state.system,
+        ...state,
+        accessToken: accessToken,
+        system: system,
         loginState: USER_LOGIN_SUCCESS
       }
     default:

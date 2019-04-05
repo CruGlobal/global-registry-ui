@@ -12,7 +12,7 @@ const rootReducer = (history) => combineReducers({
   loading,
   title,
   models,
-  notifications
+  notifications,
 })
 
 export default rootReducer

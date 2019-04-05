@@ -9,6 +9,7 @@ import { SnackbarProvider } from 'notistack'
 import { Provider } from 'react-redux'
 import store, { history } from './redux/store'
 import { ConnectedRouter } from 'connected-react-router'
+import { applicationInit } from './redux/actions'
 
 const theme = createMuiTheme({
   typography: {
@@ -23,6 +24,10 @@ const styles = theme => ({
 })
 
 export class App extends React.Component {
+  componentDidMount () {
+    store.dispatch(applicationInit())
+  }
+
   render () {
     const {classes} = this.props
     return (

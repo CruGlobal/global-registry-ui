@@ -1,10 +1,12 @@
-import * as actions from './actionTypes'
+import * as types from './actionTypes'
 import * as schema from '../global-registry/schema'
 import { bindActionCreators } from 'redux'
 import { transformEntityTypesResponse } from '../global-registry/utils'
 
+export const applicationInit = () => ({type: types.APPLICATION_INIT})
+
 export const enqueueSnackbar = notification => ({
-  type: actions.ENQUEUE_SNACKBAR,
+  type: types.ENQUEUE_SNACKBAR,
   notification: {
     key: new Date().getTime() + Math.random(),
     ...notification
@@ -12,42 +14,40 @@ export const enqueueSnackbar = notification => ({
 })
 
 export const removeSnackbar = key => ({
-  type: actions.REMOVE_SNACKBAR,
+  type: types.REMOVE_SNACKBAR,
   key
 })
 
-export const updateTitle = function (title) {
-  return {
-    type: actions.UPDATE_TITLE,
-    title
-  }
-}
+export const updateTitle = (title) => ({
+  type: types.UPDATE_TITLE,
+  title
+})
 
 export const userLogin = (accessToken) => ({
-  type: actions.USER_LOGIN,
+  type: types.USER_LOGIN,
   accessToken
 })
 
-export const resetUserLogin = () => ({ type: actions.USER_LOGIN_DEFAULT })
+export const resetUserLogin = () => ({type: types.USER_LOGIN_DEFAULT})
 
 export const bindPromiseActionCreators = actions => dispatch => {
   return bindActionCreators(actions, function (action) {
     return new Promise((resolve, reject) => {
-      action.meta = { ...action.meta, resolve, reject }
+      action.meta = {...action.meta, resolve, reject}
       dispatch(action)
     })
   })
 }
 
 export const getEntityTypes = () => ({
-  type: actions.GET_ENTITY_TYPES,
+  type: types.GET_ENTITY_TYPES,
   payload: {
     tag: 'entity_types',
     operationId: 'getEntityTypes',
     parameters: {
       per_page: -1
     },
-    responseInterceptor: ({ body, ...others }) => ({
+    responseInterceptor: ({body, ...others}) => ({
       body: {
         entity_types: transformEntityTypesResponse(body['entity_types'])
       },
@@ -61,7 +61,7 @@ export const getEntityTypes = () => ({
 })
 
 export const getEntityType = (entityTypeId) => ({
-  type: actions.GET_ENTITY_TYPE,
+  type: types.GET_ENTITY_TYPE,
   payload: {
     tag: 'entity_types',
     operationId: 'getEntityType',
@@ -76,7 +76,7 @@ export const getEntityType = (entityTypeId) => ({
 })
 
 export const createEntityType = (entityType) => ({
-  type: actions.CREATE_ENTITY_TYPE,
+  type: types.CREATE_ENTITY_TYPE,
   payload: {
     tag: 'entity_types',
     operationId: 'createEntityType',
@@ -90,8 +90,8 @@ export const createEntityType = (entityType) => ({
   }
 })
 
-export const updateEntityType = ({ id, ...entity_type }) => ({
-  type: actions.UPDATE_ENTITY_TYPE,
+export const updateEntityType = ({id, ...entity_type}) => ({
+  type: types.UPDATE_ENTITY_TYPE,
   payload: {
     tag: 'entity_types',
     operationId: 'updateEntityType',
@@ -109,7 +109,7 @@ export const updateEntityType = ({ id, ...entity_type }) => ({
 })
 
 export const createRelationshipType = (relationshipType) => ({
-  type: actions.CREATE_RELATIONSHIP_TYPE,
+  type: types.CREATE_RELATIONSHIP_TYPE,
   payload: {
     tag: 'relationship_types',
     operationId: 'createRelationshipType',
@@ -123,8 +123,8 @@ export const createRelationshipType = (relationshipType) => ({
   }
 })
 
-export const updateRelationshipType = ({ id, ...relationship_type }) => ({
-  type: actions.UPDATE_RELATIONSHIP_TYPE,
+export const updateRelationshipType = ({id, ...relationship_type}) => ({
+  type: types.UPDATE_RELATIONSHIP_TYPE,
   payload: {
     tag: 'relationship_types',
     operationId: 'updateRelationshipType',
@@ -142,7 +142,7 @@ export const updateRelationshipType = ({ id, ...relationship_type }) => ({
 })
 
 export const getMeasurementTypes = (entityTypeId) => ({
-  type: actions.GET_MEASUREMENT_TYPES,
+  type: types.GET_MEASUREMENT_TYPES,
   payload: {
     tag: 'measurement_types',
     operationId: 'getMeasurementTypes',
@@ -159,7 +159,7 @@ export const getMeasurementTypes = (entityTypeId) => ({
 })
 
 export const createMeasurementType = (measurement_type) => ({
-  type: actions.CREATE_MEASUREMENT_TYPE,
+  type: types.CREATE_MEASUREMENT_TYPE,
   payload: {
     tag: 'measurement_types',
     operationId: 'createMeasurementType',
@@ -173,8 +173,8 @@ export const createMeasurementType = (measurement_type) => ({
   }
 })
 
-export const updateMeasurementType = ({ id, ...measurement_type }) => ({
-  type: actions.UPDATE_MEASUREMENT_TYPE,
+export const updateMeasurementType = ({id, ...measurement_type}) => ({
+  type: types.UPDATE_MEASUREMENT_TYPE,
   payload: {
     tag: 'measurement_types',
     operationId: 'updateMeasurementType',
@@ -192,7 +192,7 @@ export const updateMeasurementType = ({ id, ...measurement_type }) => ({
 })
 
 export const getSystems = () => ({
-  type: actions.GET_SYSTEMS,
+  type: types.GET_SYSTEMS,
   payload: {
     tag: 'systems',
     operationId: 'getSystems'
@@ -203,8 +203,8 @@ export const getSystems = () => ({
   }
 })
 
-export const updateSystem = ({ id, ...system }) => ({
-  type: actions.UPDATE_SYSTEM,
+export const updateSystem = ({id, ...system}) => ({
+  type: types.UPDATE_SYSTEM,
   payload: {
     tag: 'systems',
     operationId: 'updateSystem',
@@ -223,7 +223,7 @@ export const updateSystem = ({ id, ...system }) => ({
 })
 
 export const createSystem = (system) => ({
-  type: actions.CREATE_SYSTEM,
+  type: types.CREATE_SYSTEM,
   payload: {
     tag: 'systems',
     operationId: 'createSystem',
@@ -241,7 +241,7 @@ export const createSystem = (system) => ({
 })
 
 export const deleteSystem = (id) => ({
-  type: actions.DELETE_SYSTEM,
+  type: types.DELETE_SYSTEM,
   payload: {
     tag: 'systems',
     operationId: 'deleteSystem',
@@ -255,7 +255,7 @@ export const deleteSystem = (id) => ({
 })
 
 export const resetSystemAccessToken = (id) => ({
-  type: actions.RESET_SYSTEM_ACCESS_TOKEN,
+  type: types.RESET_SYSTEM_ACCESS_TOKEN,
   payload: {
     tag: 'systems',
     operationId: 'resetSystemAccessToken',
@@ -270,7 +270,7 @@ export const resetSystemAccessToken = (id) => ({
 })
 
 export const getTrustRelationships = () => ({
-  type: actions.GET_TRUST_RELATIONSHIPS,
+  type: types.GET_TRUST_RELATIONSHIPS,
   payload: {
     tag: 'trust_relationships',
     operationId: 'getTrustRelationships'
@@ -282,7 +282,7 @@ export const getTrustRelationships = () => ({
 })
 
 export const createTrustRelationship = (trust_relationship) => ({
-  type: actions.CREATE_TRUST_RELATIONSHIP,
+  type: types.CREATE_TRUST_RELATIONSHIP,
   payload: {
     tag: 'trust_relationships',
     operationId: 'createTrustRelationship',
@@ -300,7 +300,7 @@ export const createTrustRelationship = (trust_relationship) => ({
 })
 
 export const deleteTrustRelationship = (trust_relationship_id) => ({
-  type: actions.DELETE_TRUST_RELATIONSHIP,
+  type: types.DELETE_TRUST_RELATIONSHIP,
   payload: {
     tag: 'trust_relationships',
     operationId: 'deleteTrustRelationship',
@@ -315,7 +315,7 @@ export const deleteTrustRelationship = (trust_relationship_id) => ({
 })
 
 export const getSubscriptions = () => ({
-  type: actions.GET_SUBSCRIPTIONS,
+  type: types.GET_SUBSCRIPTIONS,
   payload: {
     tag: 'subscriptions',
     operationId: 'getSubscriptions'
@@ -327,7 +327,7 @@ export const getSubscriptions = () => ({
 })
 
 export const createSubscription = (subscription) => ({
-  type: actions.CREATE_SUBSCRIPTION,
+  type: types.CREATE_SUBSCRIPTION,
   payload: {
     tag: 'subscriptions',
     operationId: 'createSubscription',
@@ -345,7 +345,7 @@ export const createSubscription = (subscription) => ({
 })
 
 export const deleteSubscription = (id) => ({
-  type: actions.DELETE_SUBSCRIPTION,
+  type: types.DELETE_SUBSCRIPTION,
   payload: {
     tag: 'subscriptions',
     operationId: 'deleteSubscription',
