@@ -11,4 +11,5 @@ nock.disableNetConnect()
 
 afterEach(() => {
   nock.cleanAll()
+  jest.restoreAllMocks()
 })

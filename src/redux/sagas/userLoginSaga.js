@@ -3,13 +3,13 @@ import { USER_LOGIN, USER_LOGIN_FAILURE, USER_LOGIN_LOADING, USER_LOGIN_SUCCESS 
 import { ACCESS_TOKEN } from '../../constants'
 import GlobalRegistryClient, { clientOptions } from '../../global-registry/global-registry-client'
 
-const SELF_SYSTEM_ID = '00000000-0000-0000-0000-000000000000'
+export const SELF_SYSTEM_ID = '00000000-0000-0000-0000-000000000000'
 
-const login = (accessToken) => GlobalRegistryClient.then(client => {
+export const login = (accessToken) => GlobalRegistryClient.then(client => {
   return client
     .apis
     .systems
-    .getSystem({ id: SELF_SYSTEM_ID }, {
+    .getSystem({id: SELF_SYSTEM_ID}, {
       ...clientOptions,
       // Override the default Authorization to login
       securities: {
@@ -25,7 +25,7 @@ const login = (accessToken) => GlobalRegistryClient.then(client => {
     })
 })
 
-export function * userLogin ({ accessToken }) {
+export function * userLogin ({accessToken}) {
   try {
     // Dispatch login loading
     yield put({
@@ -48,7 +48,7 @@ export function * userLogin ({ accessToken }) {
       system: result.system
     })
   } catch (e) {
-    yield put({ type: USER_LOGIN_FAILURE })
+    yield put({type: USER_LOGIN_FAILURE})
   }
 }
 
