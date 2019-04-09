@@ -16,13 +16,13 @@ import Grid from '@material-ui/core/Grid'
 import Fab from '@material-ui/core/Fab'
 import AddIcon from '@material-ui/icons/Add'
 import SystemTableRow from './SystemTableRow'
-import { systemsSelector } from '../../redux/selectors/systemSelectors'
-import { getSystems, getTrustRelationships } from '../../redux/actions'
+import { systemsSelector } from '../../selectors/systemSelectors'
+import { getSystems, getTrustRelationships } from '../../actions'
 import {
   isAuthenticatedSelector,
   isRootSystemSelector,
   accessTokenSelector
-} from '../../redux/selectors/authenticationSelectors'
+} from '../../selectors/authenticationSelectors'
 import Tooltip from '@material-ui/core/Tooltip/Tooltip'
 import SystemDialog from './SystemDialog'
 

@@ -18,11 +18,11 @@ import Input from '@material-ui/core/Input/Input'
 import CircularProgress from '@material-ui/core/CircularProgress/CircularProgress'
 
 import { connect } from 'react-redux'
-import { selectOptionsSelector } from '../../redux/selectors/entityTypeSelectors'
+import { selectOptionsSelector } from '../../selectors/entityTypeSelectors'
 import isEmpty from 'lodash/isEmpty'
 import find from 'lodash/find'
-import { bindPromiseActionCreators, createRelationshipType, updateRelationshipType } from '../../redux/actions'
-import { relationshipTypeSelectorFactory } from '../../redux/selectors/relationshipTypeSelectors'
+import { bindPromiseActionCreators, createRelationshipType, updateRelationshipType } from '../../actions'
+import { relationshipTypeSelectorFactory } from '../../selectors/relationshipTypeSelectors'
 
 const styles = theme => ({
   form: {

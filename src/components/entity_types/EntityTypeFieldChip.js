@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography/Typography'
 
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import { entityTypeSelectorFactory } from '../../redux/selectors/entityTypeSelectors'
+import { entityTypeSelectorFactory } from '../../selectors/entityTypeSelectors'
 
 const styles = theme => ({})
 

@@ -1,0 +1,9 @@
+{
+  "trust_relationships": [
+    {
+      "id": "92371140-5d51-11e9-92ff-784f4350fb53",
+      "source_system_id": "0bcf27d6-5bc2-11e9-b547-784f4350fb53",
+      "trusted_system_id": "f456d0c4-5bbf-11e9-bca9-784f4350fb53"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "subscriptions": [
+    {
+      "id": "c4c70175-d6f3-444d-b52e-dd54af8e7853",
+      "endpoint": "https://www.example.com/callback",
+      "entity_type_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+      "system_id": "0bcf27d6-5bc2-11e9-b547-784f4350fb53",
+      "confirmed": false,
+      "format": "json"
+    },
+    {
+      "id": "31a21e2d-7785-48dc-8510-e419247c632c",
+      "endpoint": "https://www.example.com/callback",
+      "entity_type_id": "f51f6566-5bbf-11e9-bca9-784f4350fb53",
+      "system_id": "0bcf27d6-5bc2-11e9-b547-784f4350fb53",
+      "confirmed": true,
+      "format": "json"
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "next_page": false,
+    "from": 1,
+    "to": 2
+  }
+}

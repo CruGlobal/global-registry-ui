@@ -11,7 +11,7 @@ import ExpandMore from '@material-ui/icons/ExpandMore'
 
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import { entityTypeFieldsSelectorFactory, entityTypeSelectorFactory } from '../../redux/selectors/entityTypeSelectors'
+import { entityTypeFieldsSelectorFactory, entityTypeSelectorFactory } from '../../selectors/entityTypeSelectors'
 
 const styles = theme => ({
   nested: {
@@ -62,10 +62,12 @@ class InternalTreeListItem extends React.Component {
     return (
       <React.Fragment>
         <ListItem
-          button key={entityType.id}
+          key={entityType.id}
+          button
           component={NavLink}
           to={`/entity_types/${entityType.id}`}
-          activeClassName={classes.active}>
+          activeClassName={classes.active}
+          data-testid={`navlink-EntityType-${entityType.id}`}>
           <ListItemText
             primary={entityType.name}
             primaryTypographyProps={{ noWrap: true }} />

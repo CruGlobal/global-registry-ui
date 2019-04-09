@@ -1,0 +1,822 @@
+{
+  "entity_types": [
+    {
+      "id": "f4b1e8e2-5bbf-11e9-bca9-784f4350fb53",
+      "name": "role",
+      "description": "Root level Role entity type to store enum values",
+      "data_visibility": "public",
+      "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+      "enum_values": [
+        "Staff",
+        "Specialist",
+        "Coordinator",
+        "Team Leader",
+        "Volunteer"
+      ],
+      "field_type": "enum_values",
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f486e3f4-5bbf-11e9-bca9-784f4350fb53",
+      "name": "mcc",
+      "description": "Root level MCC entity type to store enum values",
+      "data_visibility": "public",
+      "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+      "enum_values": [
+        "Student-Led Movements",
+        "Leader-Led Movements",
+        "Global Church Movements",
+        "Digital Strategies",
+        "Capacity Accelerators"
+      ],
+      "field_type": "enum_values",
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f49c19fe-5bbf-11e9-bca9-784f4350fb53",
+      "name": "funding_source",
+      "description": "Root level Funding Source entity type to store enum values",
+      "data_visibility": "public",
+      "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+      "enum_values": [
+        "Supported Staff",
+        "Centrally Funded Staff",
+        "Self-funded",
+        "Hybrid",
+        "Other"
+      ],
+      "field_type": "enum_values",
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f4a7e0d6-5bbf-11e9-bca9-784f4350fb53",
+      "name": "staff_status",
+      "description": "Root level Staff Status entity type to store enum values",
+      "data_visibility": "public",
+      "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+      "enum_values": [
+        "Full-time",
+        "Short-term",
+        "Part-time",
+        "Volunteer",
+        "Other"
+      ],
+      "field_type": "enum_values",
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f4c7dbd4-5bbf-11e9-bca9-784f4350fb53",
+      "name": "gender",
+      "description": "Root level gender entity type to store enum values",
+      "data_visibility": "public",
+      "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+      "enum_values": [
+        "Male",
+        "Female"
+      ],
+      "field_type": "enum_values",
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f4d1a416-5bbf-11e9-bca9-784f4350fb53",
+      "name": "marital_status",
+      "description": "Root level marital status entity type to store enum values",
+      "data_visibility": "public",
+      "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+      "enum_values": [
+        "Single",
+        "Married",
+        "Engaged",
+        "Separated",
+        "Divorced",
+        "Widowed"
+      ],
+      "field_type": "enum_values",
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f5158afa-5bbf-11e9-bca9-784f4350fb53",
+      "name": "ministry_type",
+      "description": "Root level ministry assigment type entity type to store enum values",
+      "data_visibility": "public",
+      "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+      "enum_values": [
+        "Global Leadership Team",
+        "Global",
+        "Area Leadership Teamm",
+        "Area",
+        "National Leadership Team",
+        "National",
+        "Regional",
+        "Field Team"
+      ],
+      "field_type": "enum_values",
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+      "name": "_enum_values",
+      "data_visibility": "public",
+      "fields": [
+        {
+          "id": "f4b1e8e2-5bbf-11e9-bca9-784f4350fb53",
+          "name": "role",
+          "description": "Root level Role entity type to store enum values",
+          "data_visibility": "public",
+          "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+          "enum_values": [
+            "Staff",
+            "Specialist",
+            "Coordinator",
+            "Team Leader",
+            "Volunteer"
+          ],
+          "field_type": "enum_values",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f486e3f4-5bbf-11e9-bca9-784f4350fb53",
+          "name": "mcc",
+          "description": "Root level MCC entity type to store enum values",
+          "data_visibility": "public",
+          "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+          "enum_values": [
+            "Student-Led Movements",
+            "Leader-Led Movements",
+            "Global Church Movements",
+            "Digital Strategies",
+            "Capacity Accelerators"
+          ],
+          "field_type": "enum_values",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f49c19fe-5bbf-11e9-bca9-784f4350fb53",
+          "name": "funding_source",
+          "description": "Root level Funding Source entity type to store enum values",
+          "data_visibility": "public",
+          "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+          "enum_values": [
+            "Supported Staff",
+            "Centrally Funded Staff",
+            "Self-funded",
+            "Hybrid",
+            "Other"
+          ],
+          "field_type": "enum_values",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4a7e0d6-5bbf-11e9-bca9-784f4350fb53",
+          "name": "staff_status",
+          "description": "Root level Staff Status entity type to store enum values",
+          "data_visibility": "public",
+          "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+          "enum_values": [
+            "Full-time",
+            "Short-term",
+            "Part-time",
+            "Volunteer",
+            "Other"
+          ],
+          "field_type": "enum_values",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4c7dbd4-5bbf-11e9-bca9-784f4350fb53",
+          "name": "gender",
+          "description": "Root level gender entity type to store enum values",
+          "data_visibility": "public",
+          "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+          "enum_values": [
+            "Male",
+            "Female"
+          ],
+          "field_type": "enum_values",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4d1a416-5bbf-11e9-bca9-784f4350fb53",
+          "name": "marital_status",
+          "description": "Root level marital status entity type to store enum values",
+          "data_visibility": "public",
+          "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+          "enum_values": [
+            "Single",
+            "Married",
+            "Engaged",
+            "Separated",
+            "Divorced",
+            "Widowed"
+          ],
+          "field_type": "enum_values",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f5158afa-5bbf-11e9-bca9-784f4350fb53",
+          "name": "ministry_type",
+          "description": "Root level ministry assigment type entity type to store enum values",
+          "data_visibility": "public",
+          "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+          "enum_values": [
+            "Global Leadership Team",
+            "Global",
+            "Area Leadership Teamm",
+            "Area",
+            "National Leadership Team",
+            "National",
+            "Regional",
+            "Field Team"
+          ],
+          "field_type": "enum_values",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f5255c5a-5bbf-11e9-bca9-784f4350fb53",
+          "name": "ministry_scope",
+          "description": "Root level ministry scope entity type to store enum values",
+          "data_visibility": "public",
+          "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+          "enum_values": [
+            "Global",
+            "Area",
+            "National",
+            "National Region",
+            "Local"
+          ],
+          "field_type": "enum_values",
+          "is_editable": true,
+          "unique_value": false
+        }
+      ],
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f5255c5a-5bbf-11e9-bca9-784f4350fb53",
+      "name": "ministry_scope",
+      "description": "Root level ministry scope entity type to store enum values",
+      "data_visibility": "public",
+      "parent_id": "f487eefc-5bbf-11e9-bca9-784f4350fb53",
+      "enum_values": [
+        "Global",
+        "Area",
+        "National",
+        "National Region",
+        "Local"
+      ],
+      "field_type": "enum_values",
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f51f6566-5bbf-11e9-bca9-784f4350fb53",
+      "name": "ministry",
+      "description": "Entity object to hold information about a ministry",
+      "data_visibility": "public",
+      "fields": [
+        {
+          "id": "f520b718-5bbf-11e9-bca9-784f4350fb53",
+          "name": "name",
+          "description": "Name of ministry (team, office, etc)",
+          "data_visibility": "public",
+          "parent_id": "f51f6566-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "string",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f522f55a-5bbf-11e9-bca9-784f4350fb53",
+          "name": "ministry_type",
+          "description": "Ministry type (team, office, etc)",
+          "data_visibility": "public",
+          "parent_id": "f51f6566-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "enum",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f52ce556-5bbf-11e9-bca9-784f4350fb53",
+          "name": "ministry_scope",
+          "description": "This defines how broad an area of responsibility you have or in which you serve.",
+          "data_visibility": "public",
+          "parent_id": "f51f6566-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "enum",
+          "is_editable": true,
+          "unique_value": false
+        }
+      ],
+      "relationships": [
+        {
+          "relationship_type": {
+            "id": "f5337e8e-5bbf-11e9-bca9-784f4350fb53",
+            "relationship_entity_type_id": "f53309e0-5bbf-11e9-bca9-784f4350fb53",
+            "relationship1": {
+              "entity_type_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+              "entity_type": "person",
+              "relationship_name": "person"
+            },
+            "relationship2": {
+              "entity_type_id": "f51f6566-5bbf-11e9-bca9-784f4350fb53",
+              "entity_type": "ministry",
+              "relationship_name": "ministry"
+            },
+            "fields": [],
+            "is_editable": true
+          }
+        }
+      ],
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f53309e0-5bbf-11e9-bca9-784f4350fb53",
+      "name": "person_person_ministry_ministry",
+      "data_visibility": "public",
+      "parent_id": "f531c116-5bbf-11e9-bca9-784f4350fb53",
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f5365398-5bbf-11e9-bca9-784f4350fb53",
+      "name": "person_husband_person_wife",
+      "data_visibility": "public",
+      "parent_id": "f531c116-5bbf-11e9-bca9-784f4350fb53",
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f531c116-5bbf-11e9-bca9-784f4350fb53",
+      "name": "_relationship",
+      "data_visibility": "public",
+      "fields": [
+        {
+          "id": "f53309e0-5bbf-11e9-bca9-784f4350fb53",
+          "name": "person_person_ministry_ministry",
+          "data_visibility": "public",
+          "parent_id": "f531c116-5bbf-11e9-bca9-784f4350fb53",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f5365398-5bbf-11e9-bca9-784f4350fb53",
+          "name": "person_husband_person_wife",
+          "data_visibility": "public",
+          "parent_id": "f531c116-5bbf-11e9-bca9-784f4350fb53",
+          "is_editable": true,
+          "unique_value": false
+        }
+      ],
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+      "name": "person",
+      "description": "Entity object to hold information about a person",
+      "data_visibility": "public",
+      "fields": [
+        {
+          "id": "f46bf486-5bbf-11e9-bca9-784f4350fb53",
+          "name": "key_username",
+          "description": "Username in Relay",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "string",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f47809e2-5bbf-11e9-bca9-784f4350fb53",
+          "name": "first_name",
+          "description": "Your official given name.",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "string",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4ba7ee4-5bbf-11e9-bca9-784f4350fb53",
+          "name": "role",
+          "description": "This is your role or position within Campus Crusade.",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "enum",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f47ce3a4-5bbf-11e9-bca9-784f4350fb53",
+          "name": "middle_name",
+          "description": "One or more middle names",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "string",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4dc5f3c-5bbf-11e9-bca9-784f4350fb53",
+          "name": "marital_status",
+          "description": "Marital status",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "enum",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f47f6e6c-5bbf-11e9-bca9-784f4350fb53",
+          "name": "last_name",
+          "description": "Your official family name.",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "string",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4bdec96-5bbf-11e9-bca9-784f4350fb53",
+          "name": "employment_country",
+          "description": "This is the country from which you receive your salary or other compensation.",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "string",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4ea90fc-5bbf-11e9-bca9-784f4350fb53",
+          "name": "email_address",
+          "description": "Entity object to hold information related to an email address",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "fields": [
+            {
+              "id": "f4ed6138-5bbf-11e9-bca9-784f4350fb53",
+              "name": "email",
+              "description": "Actual email address",
+              "data_visibility": "public",
+              "parent_id": "f4ea90fc-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "email",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f4f05de8-5bbf-11e9-bca9-784f4350fb53",
+              "name": "primary",
+              "description": "True if this is the person's primary email address",
+              "data_visibility": "public",
+              "parent_id": "f4ea90fc-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "boolean",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f4f2312c-5bbf-11e9-bca9-784f4350fb53",
+              "name": "location",
+              "description": "Location of email address (work, home, etc)",
+              "data_visibility": "public",
+              "parent_id": "f4ea90fc-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            }
+          ],
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4821bd0-5bbf-11e9-bca9-784f4350fb53",
+          "name": "preferred_name",
+          "description": "This is the name by which you are commonly known or how you prefer people address you.",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "string",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4848f82-5bbf-11e9-bca9-784f4350fb53",
+          "name": "language",
+          "description": "One or more languages this person speaks (in order of priority)",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "string",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4c27ac2-5bbf-11e9-bca9-784f4350fb53",
+          "name": "date_joined_staff",
+          "description": "This is the date you officially joined Campus Crusade.",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "date",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f496edbc-5bbf-11e9-bca9-784f4350fb53",
+          "name": "mcc",
+          "description": "Mission Critical Component",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "enum",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4c50a12-5bbf-11e9-bca9-784f4350fb53",
+          "name": "date_left_staff",
+          "description": "This is the date a person officially left Campus Crusade. (Administrative use only; filled in by HR professional)",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "date",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4a52ada-5bbf-11e9-bca9-784f4350fb53",
+          "name": "funding_source",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "enum",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4df5c5a-5bbf-11e9-bca9-784f4350fb53",
+          "name": "authentication",
+          "description": "Entity object to hold unique identifiers to 3rd party authentication systems",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "fields": [
+            {
+              "id": "f4e7d128-5bbf-11e9-bca9-784f4350fb53",
+              "name": "facebook_uid",
+              "description": "Facebook user id",
+              "data_visibility": "public",
+              "parent_id": "f4df5c5a-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "integer",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f4e236dc-5bbf-11e9-bca9-784f4350fb53",
+              "name": "key_guid",
+              "description": "Globally Unique ID from The Key",
+              "data_visibility": "public",
+              "parent_id": "f4df5c5a-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f4e51a78-5bbf-11e9-bca9-784f4350fb53",
+              "name": "relay_guid",
+              "description": "Globally Unique ID from Relay",
+              "data_visibility": "public",
+              "parent_id": "f4df5c5a-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            }
+          ],
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4af6158-5bbf-11e9-bca9-784f4350fb53",
+          "name": "staff_status",
+          "description": "This identifies your working relationship with Campus Crusade, if any.",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "enum",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4cc5be6-5bbf-11e9-bca9-784f4350fb53",
+          "name": "gender",
+          "description": "'Male' or 'Female'",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "enum",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4cf3f78-5bbf-11e9-bca9-784f4350fb53",
+          "name": "birth_date",
+          "description": "Format: yyyy-mm-dd",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "field_type": "date",
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f4f3e4e0-5bbf-11e9-bca9-784f4350fb53",
+          "name": "phone_number",
+          "description": "Entity object to hold information related to a phone number",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "fields": [
+            {
+              "id": "f4f84724-5bbf-11e9-bca9-784f4350fb53",
+              "name": "extension",
+              "description": "Extention",
+              "data_visibility": "public",
+              "parent_id": "f4f3e4e0-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f4f5a992-5bbf-11e9-bca9-784f4350fb53",
+              "name": "number",
+              "description": "Actual phone number",
+              "data_visibility": "public",
+              "parent_id": "f4f3e4e0-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f4fd7c26-5bbf-11e9-bca9-784f4350fb53",
+              "name": "primary",
+              "description": "True if this is the person's primary email address",
+              "data_visibility": "public",
+              "parent_id": "f4f3e4e0-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "boolean",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f4fae542-5bbf-11e9-bca9-784f4350fb53",
+              "name": "location",
+              "description": "Location of phone number (work, home, mobile, etc)",
+              "data_visibility": "public",
+              "parent_id": "f4f3e4e0-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            }
+          ],
+          "is_editable": true,
+          "unique_value": false
+        },
+        {
+          "id": "f5001724-5bbf-11e9-bca9-784f4350fb53",
+          "name": "address",
+          "description": "Entity object to hold information related to an address",
+          "data_visibility": "public",
+          "parent_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+          "fields": [
+            {
+              "id": "f507064c-5bbf-11e9-bca9-784f4350fb53",
+              "name": "dorm",
+              "description": "Dorm room number",
+              "data_visibility": "public",
+              "parent_id": "f5001724-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f501b8b8-5bbf-11e9-bca9-784f4350fb53",
+              "name": "line1",
+              "description": "First line of your street address",
+              "data_visibility": "public",
+              "parent_id": "f5001724-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f50b0148-5bbf-11e9-bca9-784f4350fb53",
+              "name": "city",
+              "description": "City/Town",
+              "data_visibility": "public",
+              "parent_id": "f5001724-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f5044510-5bbf-11e9-bca9-784f4350fb53",
+              "name": "line2",
+              "description": "Second line of your street address",
+              "data_visibility": "public",
+              "parent_id": "f5001724-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f50d8ecc-5bbf-11e9-bca9-784f4350fb53",
+              "name": "state",
+              "description": "State/Province/Region",
+              "data_visibility": "public",
+              "parent_id": "f5001724-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f5103366-5bbf-11e9-bca9-784f4350fb53",
+              "name": "postal_code",
+              "description": "Zip code, postal code, mail code, etc",
+              "data_visibility": "public",
+              "parent_id": "f5001724-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            },
+            {
+              "id": "f512dbac-5bbf-11e9-bca9-784f4350fb53",
+              "name": "country",
+              "description": "State/Province/Region",
+              "data_visibility": "public",
+              "parent_id": "f5001724-5bbf-11e9-bca9-784f4350fb53",
+              "field_type": "string",
+              "is_editable": true,
+              "unique_value": false
+            }
+          ],
+          "is_editable": true,
+          "unique_value": false
+        }
+      ],
+      "relationships": [
+        {
+          "relationship_type": {
+            "id": "f5337e8e-5bbf-11e9-bca9-784f4350fb53",
+            "relationship_entity_type_id": "f53309e0-5bbf-11e9-bca9-784f4350fb53",
+            "relationship1": {
+              "entity_type_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+              "entity_type": "person",
+              "relationship_name": "person"
+            },
+            "relationship2": {
+              "entity_type_id": "f51f6566-5bbf-11e9-bca9-784f4350fb53",
+              "entity_type": "ministry",
+              "relationship_name": "ministry"
+            },
+            "fields": [],
+            "is_editable": true
+          }
+        },
+        {
+          "relationship_type": {
+            "id": "f536abcc-5bbf-11e9-bca9-784f4350fb53",
+            "relationship_entity_type_id": "f5365398-5bbf-11e9-bca9-784f4350fb53",
+            "relationship1": {
+              "entity_type_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+              "entity_type": "person",
+              "relationship_name": "husband"
+            },
+            "relationship2": {
+              "entity_type_id": "f45f9632-5bbf-11e9-bca9-784f4350fb53",
+              "entity_type": "person",
+              "relationship_name": "wife"
+            },
+            "fields": [],
+            "is_editable": true
+          }
+        }
+      ],
+      "is_editable": true,
+      "unique_value": false
+    },
+    {
+      "id": "037a891a-5bc0-11e9-9f76-784f4350fb53",
+      "name": "mcc",
+      "data_visibility": "public",
+      "is_editable": true,
+      "unique_value": false
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "next_page": false,
+    "from": 1,
+    "to": 15
+  }
+}

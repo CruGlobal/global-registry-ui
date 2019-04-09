@@ -9,7 +9,7 @@ import Arrow from '@material-ui/icons/ArrowRightAltRounded'
 
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import { relationshipTypeSelectorFactory } from '../../redux/selectors/relationshipTypeSelectors'
+import { relationshipTypeSelectorFactory } from '../../selectors/relationshipTypeSelectors'
 
 const styles = theme => ({
   left: {

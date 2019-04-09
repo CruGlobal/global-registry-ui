@@ -17,18 +17,18 @@ import EntityTypeDialog from './EntityTypeDialog'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { push } from 'connected-react-router'
-import { getEntityType, getMeasurementTypes } from '../../redux/actions'
+import { getEntityType, getMeasurementTypes } from '../../actions'
 import {
   entityTypeFieldsSelectorFactory,
   entityTypeSelectorFactory,
   entityTypeEnumValuesSelector
-} from '../../redux/selectors/entityTypeSelectors'
-import { measurementTypesSelectorFactory } from '../../redux/selectors/measurementTypeSelectors'
+} from '../../selectors/entityTypeSelectors'
+import { measurementTypesSelectorFactory } from '../../selectors/measurementTypeSelectors'
 import RelationshipTypeDialog from './RelationshipTypeDialog'
-import { entityTypeRelationshipTypesSelector } from '../../redux/selectors/relationshipTypeSelectors'
+import { entityTypeRelationshipTypesSelector } from '../../selectors/relationshipTypeSelectors'
 import Chip from '@material-ui/core/Chip/Chip'
 import MeasurementTypeDialog from './MeasurementTypeDialog'
-import { isAuthenticatedSelector } from '../../redux/selectors/authenticationSelectors'
+import { isAuthenticatedSelector } from '../../selectors/authenticationSelectors'
 
 const styles = theme => ({
   fab: {
@@ -163,7 +163,7 @@ class EntityType extends React.Component {
     if (typeof entityType === 'undefined') { return null }
     return (
       <React.Fragment>
-        <Paper>
+        <Paper data-testid='entity_type'>
           <CardContent>
             <Grid container>
               <Grid item xs>

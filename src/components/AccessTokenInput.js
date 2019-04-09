@@ -28,11 +28,11 @@ import {
   USER_LOGIN_FAILURE,
   USER_LOGIN_LOADING,
   USER_LOGIN_SUCCESS
-} from '../redux/actionTypes'
+} from '../constants'
 import {
   userLogin,
   resetUserLogin
-} from '../redux/actions'
+} from '../actions'
 
 const VIEW_MODE = 'VIEW_MODE'
 const EDIT_MODE = 'EDIT_MODE'
@@ -160,7 +160,8 @@ class AccessTokenInput extends Component {
         return (
           <Button
             className={classes.button}
-            onClick={this.changeToEditMode}>
+            onClick={this.changeToEditMode}
+            data-testid='AccessTokenInput-VIEW_MODE'>
             <AccountIcon className={classes.buttonIcon} />
             <Typography className={classes.label} noWrap>{this.label || 'Access Token'}</Typography>
           </Button>

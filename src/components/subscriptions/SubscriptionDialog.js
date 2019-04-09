@@ -19,8 +19,8 @@ import InputLabel from '@material-ui/core/InputLabel'
 import { connect } from 'react-redux'
 import isEmpty from 'lodash/isEmpty'
 import find from 'lodash/find'
-import { bindPromiseActionCreators, createSubscription } from '../../redux/actions'
-import { selectOptionsSelector } from '../../redux/selectors/entityTypeSelectors'
+import { bindPromiseActionCreators, createSubscription } from '../../actions'
+import { selectOptionsSelector } from '../../selectors/entityTypeSelectors'
 
 const styles = theme => ({
   form: {

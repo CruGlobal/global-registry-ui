@@ -13,7 +13,7 @@ import CircularProgress from '@material-ui/core/CircularProgress/CircularProgres
 import ChipInput from 'material-ui-chip-input'
 
 import { connect } from 'react-redux'
-import { bindPromiseActionCreators, updateSystem } from '../../redux/actions'
+import { bindPromiseActionCreators, updateSystem } from '../../actions'
 
 const styles = theme => ({
   form: {

@@ -15,9 +15,9 @@ import CircularProgress from '@material-ui/core/CircularProgress/CircularProgres
 import { connect } from 'react-redux'
 import isEmpty from 'lodash/isEmpty'
 import find from 'lodash/find'
-import { measurementTypeSelector } from '../../redux/selectors/measurementTypeSelectors'
-import { entityTypeSelector } from '../../redux/selectors/entityTypeSelectors'
-import { bindPromiseActionCreators, createMeasurementType, updateMeasurementType } from '../../redux/actions'
+import { measurementTypeSelector } from '../../selectors/measurementTypeSelectors'
+import { entityTypeSelector } from '../../selectors/entityTypeSelectors'
+import { bindPromiseActionCreators, createMeasurementType, updateMeasurementType } from '../../actions'
 
 const styles = theme => ({
   form: {

@@ -22,8 +22,8 @@ import MenuItem from '@material-ui/core/MenuItem'
 import {
   systemSelectorFactory,
   trustRelationshipSelectorFactory
-} from '../../redux/selectors/systemSelectors'
-import { systemSelector } from '../../redux/selectors/authenticationSelectors'
+} from '../../selectors/systemSelectors'
+import { systemSelector } from '../../selectors/authenticationSelectors'
 import {
   createTrustRelationship,
   deleteTrustRelationship,
@@ -31,7 +31,7 @@ import {
   updateSystem,
   deleteSystem,
   resetSystemAccessToken
-} from '../../redux/actions'
+} from '../../actions'
 import repeat from 'lodash/repeat'
 
 const styles = theme => ({
@@ -158,7 +158,7 @@ class SystemTableRow extends React.Component {
     const { menuAnchorEl } = this.state
     const menuOpen = Boolean(menuAnchorEl)
     return (
-      <TableRow>
+      <TableRow data-testid={`TableRow-System-${system.id}`}>
         <TableCell className={classes.cell}>
           <div className={classes.wrapper}>
             <Checkbox

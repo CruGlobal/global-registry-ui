@@ -8,9 +8,9 @@ import List from '@material-ui/core/List'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import EntityTypeListItem from './EntityTypeListItem'
 
-import { getEntityTypes } from '../../redux/actions'
-import { rootEntityTypesSelector } from '../../redux/selectors/entityTypeSelectors'
-import { isAuthenticatedSelector } from '../../redux/selectors/authenticationSelectors'
+import { getEntityTypes } from '../../actions'
+import { rootEntityTypesSelector } from '../../selectors/entityTypeSelectors'
+import { isAuthenticatedSelector } from '../../selectors/authenticationSelectors'
 
 const styles = theme => ({
   root: {
@@ -36,16 +36,18 @@ class EntityTypeList extends React.Component {
   }
 
   render () {
-    const { classes, rootEntityTypes, loading } = this.props
+    const {classes, rootEntityTypes, loading} = this.props
     return (
-      <React.Fragment>
-        {loading && !rootEntityTypes.length
-          ? (<CircularProgress />)
-          : (<List className={classes.root}>
-            {rootEntityTypes.map(entityType => (
-              <EntityTypeListItem key={entityType.id} entityTypeId={entityType.id} />))}
-          </List>)}
-      </React.Fragment>
+      <div data-testid='list-EntityType'>
+        {
+          loading && !rootEntityTypes.length ?
+            <CircularProgress/> :
+            <List className={classes.root}>
+              {rootEntityTypes.map(entityType => (
+                <EntityTypeListItem key={entityType.id} entityTypeId={entityType.id}/>))}
+            </List>
+        }
+      </div>
     )
   }
 }
@@ -67,6 +69,6 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-  connect(mapStateToProps, { getEntityTypes }),
+  connect(mapStateToProps, {getEntityTypes}),
   withStyles(styles)
 )(EntityTypeList)

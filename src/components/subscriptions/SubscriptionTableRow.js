@@ -15,8 +15,8 @@ import MenuItem from '@material-ui/core/MenuItem'
 import {
   bindPromiseActionCreators,
   deleteSubscription
-} from '../../redux/actions'
-import { entityTypeSelector } from '../../redux/selectors/entityTypeSelectors'
+} from '../../actions'
+import { entityTypeSelector } from '../../selectors/entityTypeSelectors'
 
 const styles = theme => ({
   wrapper: {
@@ -68,7 +68,7 @@ class SubscriptionTableRow extends React.Component {
     const { menuAnchorEl } = this.state
     const menuOpen = Boolean(menuAnchorEl)
     return (
-      <TableRow>
+      <TableRow data-testid={`TableRow-Subscription-${subscription.id}`}>
         <TableCell className={classes.cell}>
           {subscription.id}
         </TableCell>

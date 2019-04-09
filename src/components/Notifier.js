@@ -2,7 +2,7 @@ import React from 'react'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { withSnackbar } from 'notistack'
-import { removeSnackbar } from '../redux/actions'
+import { removeNotification } from '../actions'
 import differenceBy from 'lodash/differenceBy'
 
 class Notifier extends React.Component {
@@ -38,6 +38,6 @@ const mapStateToProps = state => ({
 })
 
 export default compose(
-  connect(mapStateToProps, { removeSnackbar }),
+  connect(mapStateToProps, { removeSnackbar: removeNotification }),
   withSnackbar
 )(Notifier)

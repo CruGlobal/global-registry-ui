@@ -1,0 +1,2580 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App invalid accessToken should render correct route without data 1`] = `
+<div>
+  <div
+    class="App-root-224"
+  >
+    <header
+      class="MuiPaper-root-246 MuiPaper-elevation4-252 MuiAppBar-root-237 MuiAppBar-positionAbsolute-239 MuiAppBar-colorPrimary-244 AppFrame-appBar-225"
+    >
+      <div
+        class="MuiToolbar-root-273 MuiToolbar-regular-275 AppFrame-toolbar-227"
+      >
+        <button
+          aria-label="Open drawer"
+          class="MuiButtonBase-root-283 MuiIconButton-root-277 MuiIconButton-colorInherit-278 AppFrame-menuButton-229"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label-282"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-286"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root-415"
+          />
+        </button>
+        <h1
+          class="MuiTypography-root-295 MuiTypography-h6-312 MuiTypography-colorInherit-324 MuiTypography-noWrap-321 AppFrame-title-231"
+        >
+          Entity Types
+        </h1>
+        <div
+          class="MuiPaper-root-246 MuiPaper-elevation0-248 MuiPaper-rounded-247 AccessTokenInput-paper-334"
+        >
+          <div
+            class="MuiInputBase-root-435 MuiInput-root-422 AccessTokenInput-inputRoot-335 MuiInput-underline-426 MuiInputBase-error-441 MuiInput-error-427 MuiInputBase-focused-437 MuiInput-focused-424 MuiInputBase-adornedStart-439"
+          >
+            <div
+              class="MuiInputAdornment-root-486 MuiInputAdornment-positionStart-488"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-286 AccessTokenInput-errorIcon-341"
+                elevation="2"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                />
+              </svg>
+            </div>
+            <input
+              aria-invalid="true"
+              class="MuiInputBase-input-445 MuiInput-input-430 AccessTokenInput-input-336 MuiInputBase-inputAdornedStart-450"
+              placeholder="Access Token"
+              type="text"
+              value="bad"
+            />
+          </div>
+          <hr
+            class="MuiDivider-root-380 AccessTokenInput-divider-340"
+          />
+          <button
+            class="MuiButtonBase-root-283 MuiIconButton-root-277 MuiIconButton-colorInherit-278 AccessTokenInput-iconDone-337"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-282"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-286"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-415"
+            />
+          </button>
+          <button
+            class="MuiButtonBase-root-283 MuiIconButton-root-277 MuiIconButton-colorInherit-278 AccessTokenInput-iconCancel-338"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-282"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-286"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-415"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <div
+      class="MuiDrawer-root-368 MuiDrawer-docked-369"
+    >
+      <div
+        class="MuiPaper-root-246 MuiPaper-elevation0-248 MuiDrawer-paper-370 AppFrame-drawerPaper-232 AppFrame-drawerPaperClose-233 MuiDrawer-paperAnchorLeft-371 MuiDrawer-paperAnchorDockedLeft-375"
+      >
+        <div
+          class="AppFrame-toolbarIcon-228"
+        >
+          <button
+            class="MuiButtonBase-root-283 MuiIconButton-root-277"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-282"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-286"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-415"
+            />
+          </button>
+        </div>
+        <hr
+          class="MuiDivider-root-380"
+        />
+        <ul
+          class="MuiList-root-386 MuiList-padding-387"
+          data-testid="navigation"
+        >
+          <a
+            class="MuiButtonBase-root-283 MuiListItem-root-390 MuiListItem-default-393 MuiListItem-gutters-398 MuiListItem-button-399"
+            data-testid="navlink-/"
+            href="/"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-402"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-286"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-403"
+            >
+              <span
+                class="MuiTypography-root-295 MuiTypography-body1-304 MuiListItemText-primary-406"
+              >
+                OpenAPI Spec
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-415"
+            />
+          </a>
+          <a
+            aria-current="page"
+            class="MuiButtonBase-root-283 MuiListItem-root-390 MuiListItem-default-393 MuiListItem-gutters-398 MuiListItem-button-399 Navigation-active-385"
+            data-testid="navlink-/entity_types"
+            href="/entity_types"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-402"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-286"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <defs>
+                  <path
+                    d="M0 0h24v24H0z"
+                    id="a"
+                  />
+                </defs>
+                <path
+                  clip-rule="evenodd"
+                  d="M13 9.5h5v-2h-5v2zm0 7h5v-2h-5v2zm6 4.5H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zM6 11h5V6H6v5zm1-4h3v3H7V7zM6 18h5v-5H6v5zm1-4h3v3H7v-3z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-403"
+            >
+              <span
+                class="MuiTypography-root-295 MuiTypography-body1-304 MuiListItemText-primary-406"
+              >
+                Entity Types
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-415"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-283 MuiListItem-root-390 MuiListItem-default-393 MuiListItem-gutters-398 MuiListItem-button-399"
+            data-testid="navlink-/systems"
+            href="/systems"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-402"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-286"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.81 4.47c-.08 0-.16-.02-.23-.06C15.66 3.42 14 3 12.01 3c-1.98 0-3.86.47-5.57 1.41-.24.13-.54.04-.68-.2-.13-.24-.04-.55.2-.68C7.82 2.52 9.86 2 12.01 2c2.13 0 3.99.47 6.03 1.52.25.13.34.43.21.67-.09.18-.26.28-.44.28zM3.5 9.72c-.1 0-.2-.03-.29-.09-.23-.16-.28-.47-.12-.7.99-1.4 2.25-2.5 3.75-3.27C9.98 4.04 14 4.03 17.15 5.65c1.5.77 2.76 1.86 3.75 3.25.16.22.11.54-.12.7-.23.16-.54.11-.7-.12-.9-1.26-2.04-2.25-3.39-2.94-2.87-1.47-6.54-1.47-9.4.01-1.36.7-2.5 1.7-3.4 2.96-.08.14-.23.21-.39.21zm6.25 12.07c-.13 0-.26-.05-.35-.15-.87-.87-1.34-1.43-2.01-2.64-.69-1.23-1.05-2.73-1.05-4.34 0-2.97 2.54-5.39 5.66-5.39s5.66 2.42 5.66 5.39c0 .28-.22.5-.5.5s-.5-.22-.5-.5c0-2.42-2.09-4.39-4.66-4.39-2.57 0-4.66 1.97-4.66 4.39 0 1.44.32 2.77.93 3.85.64 1.15 1.08 1.64 1.85 2.42.19.2.19.51 0 .71-.11.1-.24.15-.37.15zm7.17-1.85c-1.19 0-2.24-.3-3.1-.89-1.49-1.01-2.38-2.65-2.38-4.39 0-.28.22-.5.5-.5s.5.22.5.5c0 1.41.72 2.74 1.94 3.56.71.48 1.54.71 2.54.71.24 0 .64-.03 1.04-.1.27-.05.53.13.58.41.05.27-.13.53-.41.58-.57.11-1.07.12-1.21.12zM14.91 22c-.04 0-.09-.01-.13-.02-1.59-.44-2.63-1.03-3.72-2.1-1.4-1.39-2.17-3.24-2.17-5.22 0-1.62 1.38-2.94 3.08-2.94 1.7 0 3.08 1.32 3.08 2.94 0 1.07.93 1.94 2.08 1.94s2.08-.87 2.08-1.94c0-3.77-3.25-6.83-7.25-6.83-2.84 0-5.44 1.58-6.61 4.03-.39.81-.59 1.76-.59 2.8 0 .78.07 2.01.67 3.61.1.26-.03.55-.29.64-.26.1-.55-.04-.64-.29-.49-1.31-.73-2.61-.73-3.96 0-1.2.23-2.29.68-3.24 1.33-2.79 4.28-4.6 7.51-4.6 4.55 0 8.25 3.51 8.25 7.83 0 1.62-1.38 2.94-3.08 2.94s-3.08-1.32-3.08-2.94c0-1.07-.93-1.94-2.08-1.94s-2.08.87-2.08 1.94c0 1.71.66 3.31 1.87 4.51.95.94 1.86 1.46 3.27 1.85.27.07.42.35.35.61-.05.23-.26.38-.47.38z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-403"
+            >
+              <span
+                class="MuiTypography-root-295 MuiTypography-body1-304 MuiListItemText-primary-406"
+              >
+                Systems
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-415"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-283 MuiListItem-root-390 MuiListItem-default-393 MuiListItem-gutters-398 MuiListItem-button-399"
+            data-testid="navlink-/subscriptions"
+            href="/subscriptions"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-402"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-286"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-403"
+            >
+              <span
+                class="MuiTypography-root-295 MuiTypography-body1-304 MuiListItemText-primary-406"
+              >
+                Subscriptions
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-415"
+            />
+          </a>
+        </ul>
+      </div>
+    </div>
+    <main
+      class="AppFrame-content-234"
+    >
+      <div
+        class="AppFrame-appBarSpacer-235"
+      />
+      <div
+        class="PageFrame-root-412"
+      >
+        <div
+          class="EntityTypes-root-409"
+          data-testid="entity_types-layout"
+        >
+          <div
+            class="MuiPaper-root-246 MuiPaper-elevation2-250 MuiPaper-rounded-247 EntityTypes-list-410"
+          >
+            <div
+              data-testid="list-EntityType"
+            >
+              <ul
+                class="MuiList-root-386 MuiList-padding-387 EntityTypeList-root-413"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div
+      class="MuiSnackbar-root-476 SnackbarItem-root-462 MuiSnackbar-anchorOriginTopCenter-477 SnackbarItem-anchorOriginTopCenter-463"
+      data-testid="snackbar-userLogin-error"
+      height="0"
+      style="top: 20px; transition: all 200ms; transition-delay: 150ms;"
+    >
+      <div
+        aria-describedby="client-snackbar"
+        class="MuiTypography-root-295 MuiTypography-body2-303 MuiPaper-root-246 MuiPaper-elevation6-254 MuiSnackbarContent-root-483 SnackbarItem-base-469 SnackbarItem-variantError-472 SnackbarItem-lessPadding-470"
+        role="alertdialog"
+        style="webkit-transform: translate(0, 0); transform: translate(0, 0); webkit-transition: -webkit-transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms; transition: transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;"
+      >
+        <div
+          class="MuiSnackbarContent-message-484"
+        >
+          <span
+            class="SnackbarItem-message-475"
+            id="client-snackbar"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-286"
+              focusable="false"
+              role="presentation"
+              style="opacity: 0.9; font-size: 20px; margin-right: 8px;"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41, 20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53, 2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16, 14.59L13.41,12L16,9.41L14.59,8Z"
+              />
+            </svg>
+            Unauthorized: Access Token is invalid or not allowed from your current location.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App should render dashboard 1`] = `
+<div>
+  <div
+    class="App-root-1"
+  >
+    <header
+      class="MuiPaper-root-23 MuiPaper-elevation4-29 MuiAppBar-root-14 MuiAppBar-positionAbsolute-16 MuiAppBar-colorPrimary-21 AppFrame-appBar-2"
+    >
+      <div
+        class="MuiToolbar-root-50 MuiToolbar-regular-52 AppFrame-toolbar-4"
+      >
+        <button
+          aria-label="Open drawer"
+          class="MuiButtonBase-root-60 MuiIconButton-root-54 MuiIconButton-colorInherit-55 AppFrame-menuButton-6"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label-59"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-63"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root-187"
+          />
+        </button>
+        <h1
+          class="MuiTypography-root-72 MuiTypography-h6-89 MuiTypography-colorInherit-101 MuiTypography-noWrap-98 AppFrame-title-8"
+        >
+          OpenAPI Specification
+        </h1>
+        <div
+          class="MuiPaper-root-23 MuiPaper-elevation0-25 MuiPaper-rounded-24 AccessTokenInput-paper-111"
+        >
+          <div
+            class="MuiInputBase-root-207 MuiInput-root-194 AccessTokenInput-inputRoot-112 MuiInputBase-focused-209 MuiInput-focused-196"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input-217 MuiInput-input-202 AccessTokenInput-input-113"
+              placeholder="Access Token"
+              type="text"
+              value=""
+            />
+          </div>
+          <hr
+            class="MuiDivider-root-157 AccessTokenInput-divider-117"
+          />
+          <button
+            class="MuiButtonBase-root-60 MuiIconButton-root-54 MuiIconButton-colorInherit-55 AccessTokenInput-iconDone-114"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-59"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-63"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-187"
+            />
+          </button>
+          <button
+            class="MuiButtonBase-root-60 MuiIconButton-root-54 MuiIconButton-colorInherit-55 AccessTokenInput-iconCancel-115"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-59"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-63"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-187"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <div
+      class="MuiDrawer-root-145 MuiDrawer-docked-146"
+    >
+      <div
+        class="MuiPaper-root-23 MuiPaper-elevation0-25 MuiDrawer-paper-147 AppFrame-drawerPaper-9 AppFrame-drawerPaperClose-10 MuiDrawer-paperAnchorLeft-148 MuiDrawer-paperAnchorDockedLeft-152"
+      >
+        <div
+          class="AppFrame-toolbarIcon-5"
+        >
+          <button
+            class="MuiButtonBase-root-60 MuiIconButton-root-54"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-59"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-63"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-187"
+            />
+          </button>
+        </div>
+        <hr
+          class="MuiDivider-root-157"
+        />
+        <ul
+          class="MuiList-root-163 MuiList-padding-164"
+          data-testid="navigation"
+        >
+          <a
+            aria-current="page"
+            class="MuiButtonBase-root-60 MuiListItem-root-167 MuiListItem-default-170 MuiListItem-gutters-175 MuiListItem-button-176 Navigation-active-162"
+            data-testid="navlink-/"
+            href="/"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-179"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-63"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-180"
+            >
+              <span
+                class="MuiTypography-root-72 MuiTypography-body1-81 MuiListItemText-primary-183"
+              >
+                OpenAPI Spec
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-187"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-60 MuiListItem-root-167 MuiListItem-default-170 MuiListItem-gutters-175 MuiListItem-button-176"
+            data-testid="navlink-/entity_types"
+            href="/entity_types"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-179"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-63"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <defs>
+                  <path
+                    d="M0 0h24v24H0z"
+                    id="a"
+                  />
+                </defs>
+                <path
+                  clip-rule="evenodd"
+                  d="M13 9.5h5v-2h-5v2zm0 7h5v-2h-5v2zm6 4.5H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zM6 11h5V6H6v5zm1-4h3v3H7V7zM6 18h5v-5H6v5zm1-4h3v3H7v-3z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-180"
+            >
+              <span
+                class="MuiTypography-root-72 MuiTypography-body1-81 MuiListItemText-primary-183"
+              >
+                Entity Types
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-187"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-60 MuiListItem-root-167 MuiListItem-default-170 MuiListItem-gutters-175 MuiListItem-button-176"
+            data-testid="navlink-/systems"
+            href="/systems"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-179"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-63"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.81 4.47c-.08 0-.16-.02-.23-.06C15.66 3.42 14 3 12.01 3c-1.98 0-3.86.47-5.57 1.41-.24.13-.54.04-.68-.2-.13-.24-.04-.55.2-.68C7.82 2.52 9.86 2 12.01 2c2.13 0 3.99.47 6.03 1.52.25.13.34.43.21.67-.09.18-.26.28-.44.28zM3.5 9.72c-.1 0-.2-.03-.29-.09-.23-.16-.28-.47-.12-.7.99-1.4 2.25-2.5 3.75-3.27C9.98 4.04 14 4.03 17.15 5.65c1.5.77 2.76 1.86 3.75 3.25.16.22.11.54-.12.7-.23.16-.54.11-.7-.12-.9-1.26-2.04-2.25-3.39-2.94-2.87-1.47-6.54-1.47-9.4.01-1.36.7-2.5 1.7-3.4 2.96-.08.14-.23.21-.39.21zm6.25 12.07c-.13 0-.26-.05-.35-.15-.87-.87-1.34-1.43-2.01-2.64-.69-1.23-1.05-2.73-1.05-4.34 0-2.97 2.54-5.39 5.66-5.39s5.66 2.42 5.66 5.39c0 .28-.22.5-.5.5s-.5-.22-.5-.5c0-2.42-2.09-4.39-4.66-4.39-2.57 0-4.66 1.97-4.66 4.39 0 1.44.32 2.77.93 3.85.64 1.15 1.08 1.64 1.85 2.42.19.2.19.51 0 .71-.11.1-.24.15-.37.15zm7.17-1.85c-1.19 0-2.24-.3-3.1-.89-1.49-1.01-2.38-2.65-2.38-4.39 0-.28.22-.5.5-.5s.5.22.5.5c0 1.41.72 2.74 1.94 3.56.71.48 1.54.71 2.54.71.24 0 .64-.03 1.04-.1.27-.05.53.13.58.41.05.27-.13.53-.41.58-.57.11-1.07.12-1.21.12zM14.91 22c-.04 0-.09-.01-.13-.02-1.59-.44-2.63-1.03-3.72-2.1-1.4-1.39-2.17-3.24-2.17-5.22 0-1.62 1.38-2.94 3.08-2.94 1.7 0 3.08 1.32 3.08 2.94 0 1.07.93 1.94 2.08 1.94s2.08-.87 2.08-1.94c0-3.77-3.25-6.83-7.25-6.83-2.84 0-5.44 1.58-6.61 4.03-.39.81-.59 1.76-.59 2.8 0 .78.07 2.01.67 3.61.1.26-.03.55-.29.64-.26.1-.55-.04-.64-.29-.49-1.31-.73-2.61-.73-3.96 0-1.2.23-2.29.68-3.24 1.33-2.79 4.28-4.6 7.51-4.6 4.55 0 8.25 3.51 8.25 7.83 0 1.62-1.38 2.94-3.08 2.94s-3.08-1.32-3.08-2.94c0-1.07-.93-1.94-2.08-1.94s-2.08.87-2.08 1.94c0 1.71.66 3.31 1.87 4.51.95.94 1.86 1.46 3.27 1.85.27.07.42.35.35.61-.05.23-.26.38-.47.38z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-180"
+            >
+              <span
+                class="MuiTypography-root-72 MuiTypography-body1-81 MuiListItemText-primary-183"
+              >
+                Systems
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-187"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-60 MuiListItem-root-167 MuiListItem-default-170 MuiListItem-gutters-175 MuiListItem-button-176"
+            data-testid="navlink-/subscriptions"
+            href="/subscriptions"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-179"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-63"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-180"
+            >
+              <span
+                class="MuiTypography-root-72 MuiTypography-body1-81 MuiListItemText-primary-183"
+              >
+                Subscriptions
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-187"
+            />
+          </a>
+        </ul>
+      </div>
+    </div>
+    <main
+      class="AppFrame-content-11"
+    >
+      <div
+        class="AppFrame-appBarSpacer-12"
+      />
+      <div
+        class="PageFrame-root-186"
+      >
+        <div
+          data-testid="openapi-layout"
+          id="swaggerContainer"
+        >
+          <div
+            class="swagger-ui"
+            data-reactroot=""
+          >
+            <div
+              class="loading-container"
+            >
+              <div
+                class="info"
+              >
+                <div
+                  class="loading-container"
+                >
+                  <div
+                    class="loading"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App valid accessToken /entity_types should render /entity_types route 1`] = `
+<div>
+  <div
+    class="App-root-491"
+  >
+    <header
+      class="MuiPaper-root-513 MuiPaper-elevation4-519 MuiAppBar-root-504 MuiAppBar-positionAbsolute-506 MuiAppBar-colorPrimary-511 AppFrame-appBar-492"
+    >
+      <div
+        class="MuiToolbar-root-540 MuiToolbar-regular-542 AppFrame-toolbar-494"
+      >
+        <button
+          aria-label="Open drawer"
+          class="MuiButtonBase-root-550 MuiIconButton-root-544 MuiIconButton-colorInherit-545 AppFrame-menuButton-496"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label-549"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-553"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root-682"
+          />
+        </button>
+        <h1
+          class="MuiTypography-root-562 MuiTypography-h6-579 MuiTypography-colorInherit-591 MuiTypography-noWrap-588 AppFrame-title-498"
+        >
+          Entity Types
+        </h1>
+        <button
+          class="MuiButtonBase-root-550 MuiButton-root-729 MuiButton-text-731 MuiButton-flat-734 AccessTokenInput-button-598"
+          data-testid="AccessTokenInput-VIEW_MODE"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-730"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-553 AccessTokenInput-buttonIcon-600"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+            <p
+              class="MuiTypography-root-562 MuiTypography-body2-570 MuiTypography-noWrap-588 AccessTokenInput-label-599"
+            >
+              api_client
+            </p>
+          </span>
+          <span
+            class="MuiTouchRipple-root-682"
+          />
+        </button>
+      </div>
+    </header>
+    <div
+      class="MuiDrawer-root-635 MuiDrawer-docked-636"
+    >
+      <div
+        class="MuiPaper-root-513 MuiPaper-elevation0-515 MuiDrawer-paper-637 AppFrame-drawerPaper-499 AppFrame-drawerPaperClose-500 MuiDrawer-paperAnchorLeft-638 MuiDrawer-paperAnchorDockedLeft-642"
+      >
+        <div
+          class="AppFrame-toolbarIcon-495"
+        >
+          <button
+            class="MuiButtonBase-root-550 MuiIconButton-root-544"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-549"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-553"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-682"
+            />
+          </button>
+        </div>
+        <hr
+          class="MuiDivider-root-647"
+        />
+        <ul
+          class="MuiList-root-653 MuiList-padding-654"
+          data-testid="navigation"
+        >
+          <a
+            class="MuiButtonBase-root-550 MuiListItem-root-657 MuiListItem-default-660 MuiListItem-gutters-665 MuiListItem-button-666"
+            data-testid="navlink-/"
+            href="/"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-669"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-553"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-670"
+            >
+              <span
+                class="MuiTypography-root-562 MuiTypography-body1-571 MuiListItemText-primary-673"
+              >
+                OpenAPI Spec
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-682"
+            />
+          </a>
+          <a
+            aria-current="page"
+            class="MuiButtonBase-root-550 MuiListItem-root-657 MuiListItem-default-660 MuiListItem-gutters-665 MuiListItem-button-666 Navigation-active-652"
+            data-testid="navlink-/entity_types"
+            href="/entity_types"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-669"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-553"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <defs>
+                  <path
+                    d="M0 0h24v24H0z"
+                    id="a"
+                  />
+                </defs>
+                <path
+                  clip-rule="evenodd"
+                  d="M13 9.5h5v-2h-5v2zm0 7h5v-2h-5v2zm6 4.5H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zM6 11h5V6H6v5zm1-4h3v3H7V7zM6 18h5v-5H6v5zm1-4h3v3H7v-3z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-670"
+            >
+              <span
+                class="MuiTypography-root-562 MuiTypography-body1-571 MuiListItemText-primary-673"
+              >
+                Entity Types
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-682"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-550 MuiListItem-root-657 MuiListItem-default-660 MuiListItem-gutters-665 MuiListItem-button-666"
+            data-testid="navlink-/systems"
+            href="/systems"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-669"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-553"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.81 4.47c-.08 0-.16-.02-.23-.06C15.66 3.42 14 3 12.01 3c-1.98 0-3.86.47-5.57 1.41-.24.13-.54.04-.68-.2-.13-.24-.04-.55.2-.68C7.82 2.52 9.86 2 12.01 2c2.13 0 3.99.47 6.03 1.52.25.13.34.43.21.67-.09.18-.26.28-.44.28zM3.5 9.72c-.1 0-.2-.03-.29-.09-.23-.16-.28-.47-.12-.7.99-1.4 2.25-2.5 3.75-3.27C9.98 4.04 14 4.03 17.15 5.65c1.5.77 2.76 1.86 3.75 3.25.16.22.11.54-.12.7-.23.16-.54.11-.7-.12-.9-1.26-2.04-2.25-3.39-2.94-2.87-1.47-6.54-1.47-9.4.01-1.36.7-2.5 1.7-3.4 2.96-.08.14-.23.21-.39.21zm6.25 12.07c-.13 0-.26-.05-.35-.15-.87-.87-1.34-1.43-2.01-2.64-.69-1.23-1.05-2.73-1.05-4.34 0-2.97 2.54-5.39 5.66-5.39s5.66 2.42 5.66 5.39c0 .28-.22.5-.5.5s-.5-.22-.5-.5c0-2.42-2.09-4.39-4.66-4.39-2.57 0-4.66 1.97-4.66 4.39 0 1.44.32 2.77.93 3.85.64 1.15 1.08 1.64 1.85 2.42.19.2.19.51 0 .71-.11.1-.24.15-.37.15zm7.17-1.85c-1.19 0-2.24-.3-3.1-.89-1.49-1.01-2.38-2.65-2.38-4.39 0-.28.22-.5.5-.5s.5.22.5.5c0 1.41.72 2.74 1.94 3.56.71.48 1.54.71 2.54.71.24 0 .64-.03 1.04-.1.27-.05.53.13.58.41.05.27-.13.53-.41.58-.57.11-1.07.12-1.21.12zM14.91 22c-.04 0-.09-.01-.13-.02-1.59-.44-2.63-1.03-3.72-2.1-1.4-1.39-2.17-3.24-2.17-5.22 0-1.62 1.38-2.94 3.08-2.94 1.7 0 3.08 1.32 3.08 2.94 0 1.07.93 1.94 2.08 1.94s2.08-.87 2.08-1.94c0-3.77-3.25-6.83-7.25-6.83-2.84 0-5.44 1.58-6.61 4.03-.39.81-.59 1.76-.59 2.8 0 .78.07 2.01.67 3.61.1.26-.03.55-.29.64-.26.1-.55-.04-.64-.29-.49-1.31-.73-2.61-.73-3.96 0-1.2.23-2.29.68-3.24 1.33-2.79 4.28-4.6 7.51-4.6 4.55 0 8.25 3.51 8.25 7.83 0 1.62-1.38 2.94-3.08 2.94s-3.08-1.32-3.08-2.94c0-1.07-.93-1.94-2.08-1.94s-2.08.87-2.08 1.94c0 1.71.66 3.31 1.87 4.51.95.94 1.86 1.46 3.27 1.85.27.07.42.35.35.61-.05.23-.26.38-.47.38z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-670"
+            >
+              <span
+                class="MuiTypography-root-562 MuiTypography-body1-571 MuiListItemText-primary-673"
+              >
+                Systems
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-682"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-550 MuiListItem-root-657 MuiListItem-default-660 MuiListItem-gutters-665 MuiListItem-button-666"
+            data-testid="navlink-/subscriptions"
+            href="/subscriptions"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-669"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-553"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-670"
+            >
+              <span
+                class="MuiTypography-root-562 MuiTypography-body1-571 MuiListItemText-primary-673"
+              >
+                Subscriptions
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-682"
+            />
+          </a>
+        </ul>
+      </div>
+    </div>
+    <main
+      class="AppFrame-content-501"
+    >
+      <div
+        class="AppFrame-appBarSpacer-502"
+      />
+      <div
+        class="PageFrame-root-679"
+      >
+        <div
+          class="EntityTypes-root-676"
+          data-testid="entity_types-layout"
+        >
+          <div
+            class="MuiPaper-root-513 MuiPaper-elevation2-517 MuiPaper-rounded-514 EntityTypes-list-677"
+          >
+            <div
+              data-testid="list-EntityType"
+            >
+              <ul
+                class="MuiList-root-653 MuiList-padding-654 EntityTypeList-root-680"
+              >
+                <a
+                  class="MuiButtonBase-root-550 MuiListItem-root-657 MuiListItem-default-660 MuiListItem-gutters-665 MuiListItem-button-666"
+                  data-testid="navlink-EntityType-f487eefc-5bbf-11e9-bca9-784f4350fb53"
+                  href="/entity_types/f487eefc-5bbf-11e9-bca9-784f4350fb53"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root-670"
+                  >
+                    <span
+                      class="MuiTypography-root-562 MuiTypography-body1-571 MuiTypography-noWrap-588 MuiListItemText-primary-673"
+                    >
+                      _enum_values
+                    </span>
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-553"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root-682"
+                  />
+                </a>
+                <a
+                  class="MuiButtonBase-root-550 MuiListItem-root-657 MuiListItem-default-660 MuiListItem-gutters-665 MuiListItem-button-666"
+                  data-testid="navlink-EntityType-f531c116-5bbf-11e9-bca9-784f4350fb53"
+                  href="/entity_types/f531c116-5bbf-11e9-bca9-784f4350fb53"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root-670"
+                  >
+                    <span
+                      class="MuiTypography-root-562 MuiTypography-body1-571 MuiTypography-noWrap-588 MuiListItemText-primary-673"
+                    >
+                      _relationship
+                    </span>
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-553"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root-682"
+                  />
+                </a>
+                <a
+                  class="MuiButtonBase-root-550 MuiListItem-root-657 MuiListItem-default-660 MuiListItem-gutters-665 MuiListItem-button-666"
+                  data-testid="navlink-EntityType-037a891a-5bc0-11e9-9f76-784f4350fb53"
+                  href="/entity_types/037a891a-5bc0-11e9-9f76-784f4350fb53"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root-670"
+                  >
+                    <span
+                      class="MuiTypography-root-562 MuiTypography-body1-571 MuiTypography-noWrap-588 MuiListItemText-primary-673"
+                    >
+                      mcc
+                    </span>
+                  </div>
+                  <span
+                    class="MuiTouchRipple-root-682"
+                  />
+                </a>
+                <a
+                  class="MuiButtonBase-root-550 MuiListItem-root-657 MuiListItem-default-660 MuiListItem-gutters-665 MuiListItem-button-666"
+                  data-testid="navlink-EntityType-f51f6566-5bbf-11e9-bca9-784f4350fb53"
+                  href="/entity_types/f51f6566-5bbf-11e9-bca9-784f4350fb53"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root-670"
+                  >
+                    <span
+                      class="MuiTypography-root-562 MuiTypography-body1-571 MuiTypography-noWrap-588 MuiListItemText-primary-673"
+                    >
+                      ministry
+                    </span>
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-553"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root-682"
+                  />
+                </a>
+                <a
+                  class="MuiButtonBase-root-550 MuiListItem-root-657 MuiListItem-default-660 MuiListItem-gutters-665 MuiListItem-button-666"
+                  data-testid="navlink-EntityType-f45f9632-5bbf-11e9-bca9-784f4350fb53"
+                  href="/entity_types/f45f9632-5bbf-11e9-bca9-784f4350fb53"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root-670"
+                  >
+                    <span
+                      class="MuiTypography-root-562 MuiTypography-body1-571 MuiTypography-noWrap-588 MuiListItemText-primary-673"
+                    >
+                      person
+                    </span>
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-553"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root-682"
+                  />
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App valid accessToken /subscriptions should render /subscriptions route 1`] = `
+<div>
+  <div
+    class="App-root-771"
+  >
+    <header
+      class="MuiPaper-root-793 MuiPaper-elevation4-799 MuiAppBar-root-784 MuiAppBar-positionAbsolute-786 MuiAppBar-colorPrimary-791 AppFrame-appBar-772"
+    >
+      <div
+        class="MuiToolbar-root-820 MuiToolbar-regular-822 AppFrame-toolbar-774"
+      >
+        <button
+          aria-label="Open drawer"
+          class="MuiButtonBase-root-830 MuiIconButton-root-824 MuiIconButton-colorInherit-825 AppFrame-menuButton-776"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label-829"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-833"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root-1016"
+          />
+        </button>
+        <h1
+          class="MuiTypography-root-842 MuiTypography-h6-859 MuiTypography-colorInherit-871 MuiTypography-noWrap-868 AppFrame-title-778"
+        >
+          Subscriptions
+        </h1>
+        <button
+          class="MuiButtonBase-root-830 MuiButton-root-1063 MuiButton-text-1065 MuiButton-flat-1068 AccessTokenInput-button-878"
+          data-testid="AccessTokenInput-VIEW_MODE"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-1064"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-833 AccessTokenInput-buttonIcon-880"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+            <p
+              class="MuiTypography-root-842 MuiTypography-body2-850 MuiTypography-noWrap-868 AccessTokenInput-label-879"
+            >
+              api_client
+            </p>
+          </span>
+          <span
+            class="MuiTouchRipple-root-1016"
+          />
+        </button>
+      </div>
+    </header>
+    <div
+      class="MuiDrawer-root-915 MuiDrawer-docked-916"
+    >
+      <div
+        class="MuiPaper-root-793 MuiPaper-elevation0-795 MuiDrawer-paper-917 AppFrame-drawerPaper-779 AppFrame-drawerPaperClose-780 MuiDrawer-paperAnchorLeft-918 MuiDrawer-paperAnchorDockedLeft-922"
+      >
+        <div
+          class="AppFrame-toolbarIcon-775"
+        >
+          <button
+            class="MuiButtonBase-root-830 MuiIconButton-root-824"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-829"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-833"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-1016"
+            />
+          </button>
+        </div>
+        <hr
+          class="MuiDivider-root-927"
+        />
+        <ul
+          class="MuiList-root-933 MuiList-padding-934"
+          data-testid="navigation"
+        >
+          <a
+            class="MuiButtonBase-root-830 MuiListItem-root-937 MuiListItem-default-940 MuiListItem-gutters-945 MuiListItem-button-946"
+            data-testid="navlink-/"
+            href="/"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-949"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-833"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-950"
+            >
+              <span
+                class="MuiTypography-root-842 MuiTypography-body1-851 MuiListItemText-primary-953"
+              >
+                OpenAPI Spec
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-1016"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-830 MuiListItem-root-937 MuiListItem-default-940 MuiListItem-gutters-945 MuiListItem-button-946"
+            data-testid="navlink-/entity_types"
+            href="/entity_types"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-949"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-833"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <defs>
+                  <path
+                    d="M0 0h24v24H0z"
+                    id="a"
+                  />
+                </defs>
+                <path
+                  clip-rule="evenodd"
+                  d="M13 9.5h5v-2h-5v2zm0 7h5v-2h-5v2zm6 4.5H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zM6 11h5V6H6v5zm1-4h3v3H7V7zM6 18h5v-5H6v5zm1-4h3v3H7v-3z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-950"
+            >
+              <span
+                class="MuiTypography-root-842 MuiTypography-body1-851 MuiListItemText-primary-953"
+              >
+                Entity Types
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-1016"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-830 MuiListItem-root-937 MuiListItem-default-940 MuiListItem-gutters-945 MuiListItem-button-946"
+            data-testid="navlink-/systems"
+            href="/systems"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-949"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-833"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.81 4.47c-.08 0-.16-.02-.23-.06C15.66 3.42 14 3 12.01 3c-1.98 0-3.86.47-5.57 1.41-.24.13-.54.04-.68-.2-.13-.24-.04-.55.2-.68C7.82 2.52 9.86 2 12.01 2c2.13 0 3.99.47 6.03 1.52.25.13.34.43.21.67-.09.18-.26.28-.44.28zM3.5 9.72c-.1 0-.2-.03-.29-.09-.23-.16-.28-.47-.12-.7.99-1.4 2.25-2.5 3.75-3.27C9.98 4.04 14 4.03 17.15 5.65c1.5.77 2.76 1.86 3.75 3.25.16.22.11.54-.12.7-.23.16-.54.11-.7-.12-.9-1.26-2.04-2.25-3.39-2.94-2.87-1.47-6.54-1.47-9.4.01-1.36.7-2.5 1.7-3.4 2.96-.08.14-.23.21-.39.21zm6.25 12.07c-.13 0-.26-.05-.35-.15-.87-.87-1.34-1.43-2.01-2.64-.69-1.23-1.05-2.73-1.05-4.34 0-2.97 2.54-5.39 5.66-5.39s5.66 2.42 5.66 5.39c0 .28-.22.5-.5.5s-.5-.22-.5-.5c0-2.42-2.09-4.39-4.66-4.39-2.57 0-4.66 1.97-4.66 4.39 0 1.44.32 2.77.93 3.85.64 1.15 1.08 1.64 1.85 2.42.19.2.19.51 0 .71-.11.1-.24.15-.37.15zm7.17-1.85c-1.19 0-2.24-.3-3.1-.89-1.49-1.01-2.38-2.65-2.38-4.39 0-.28.22-.5.5-.5s.5.22.5.5c0 1.41.72 2.74 1.94 3.56.71.48 1.54.71 2.54.71.24 0 .64-.03 1.04-.1.27-.05.53.13.58.41.05.27-.13.53-.41.58-.57.11-1.07.12-1.21.12zM14.91 22c-.04 0-.09-.01-.13-.02-1.59-.44-2.63-1.03-3.72-2.1-1.4-1.39-2.17-3.24-2.17-5.22 0-1.62 1.38-2.94 3.08-2.94 1.7 0 3.08 1.32 3.08 2.94 0 1.07.93 1.94 2.08 1.94s2.08-.87 2.08-1.94c0-3.77-3.25-6.83-7.25-6.83-2.84 0-5.44 1.58-6.61 4.03-.39.81-.59 1.76-.59 2.8 0 .78.07 2.01.67 3.61.1.26-.03.55-.29.64-.26.1-.55-.04-.64-.29-.49-1.31-.73-2.61-.73-3.96 0-1.2.23-2.29.68-3.24 1.33-2.79 4.28-4.6 7.51-4.6 4.55 0 8.25 3.51 8.25 7.83 0 1.62-1.38 2.94-3.08 2.94s-3.08-1.32-3.08-2.94c0-1.07-.93-1.94-2.08-1.94s-2.08.87-2.08 1.94c0 1.71.66 3.31 1.87 4.51.95.94 1.86 1.46 3.27 1.85.27.07.42.35.35.61-.05.23-.26.38-.47.38z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-950"
+            >
+              <span
+                class="MuiTypography-root-842 MuiTypography-body1-851 MuiListItemText-primary-953"
+              >
+                Systems
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-1016"
+            />
+          </a>
+          <a
+            aria-current="page"
+            class="MuiButtonBase-root-830 MuiListItem-root-937 MuiListItem-default-940 MuiListItem-gutters-945 MuiListItem-button-946 Navigation-active-932"
+            data-testid="navlink-/subscriptions"
+            href="/subscriptions"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-949"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-833"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-950"
+            >
+              <span
+                class="MuiTypography-root-842 MuiTypography-body1-851 MuiListItemText-primary-953"
+              >
+                Subscriptions
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-1016"
+            />
+          </a>
+        </ul>
+      </div>
+    </div>
+    <main
+      class="AppFrame-content-781"
+    >
+      <div
+        class="AppFrame-appBarSpacer-782"
+      />
+      <div
+        class="PageFrame-root-956"
+      >
+        <div
+          class="MuiPaper-root-793 MuiPaper-elevation2-797 MuiPaper-rounded-794"
+        >
+          <table
+            class="MuiTable-root-959"
+          >
+            <thead
+              class="MuiTableHead-root-960"
+            >
+              <tr
+                class="MuiTableRow-root-961 MuiTableRow-head-964"
+              >
+                <th
+                  class="MuiTableCell-root-966 MuiTableCell-head-967"
+                  scope="col"
+                >
+                  ID
+                </th>
+                <th
+                  class="MuiTableCell-root-966 MuiTableCell-head-967"
+                  scope="col"
+                >
+                  Entity Type
+                </th>
+                <th
+                  class="MuiTableCell-root-966 MuiTableCell-head-967"
+                  scope="col"
+                >
+                  Endpoint
+                </th>
+                <th
+                  class="MuiTableCell-root-966 MuiTableCell-head-967"
+                  scope="col"
+                >
+                  Format
+                </th>
+                <th
+                  class="MuiTableCell-root-966 MuiTableCell-head-967"
+                  scope="col"
+                >
+                  Confirmed
+                </th>
+                <th
+                  class="MuiTableCell-root-966 MuiTableCell-head-967 SubscriptionsTable-cell-958"
+                  scope="col"
+                >
+                  <button
+                    class="MuiButtonBase-root-830 MuiFab-root-986 MuiFab-secondary-989 MuiFab-sizeSmall-994 SubscriptionsTable-margin-957"
+                    tabindex="0"
+                    title="Create Subscription"
+                    type="button"
+                  >
+                    <span
+                      class="MuiFab-label-987"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-833"
+                        focusable="false"
+                        role="presentation"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-1016"
+                    />
+                  </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="MuiTableBody-root-996"
+            >
+              <tr
+                class="MuiTableRow-root-961"
+                data-testid="TableRow-Subscription-c4c70175-d6f3-444d-b52e-dd54af8e7853"
+              >
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968 SubscriptionTableRow-cell-1093"
+                >
+                  c4c70175-d6f3-444d-b52e-dd54af8e7853
+                </td>
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968 SubscriptionTableRow-cell-1093"
+                >
+                  person
+                </td>
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968 SubscriptionTableRow-cell-1093"
+                >
+                  https://www.example.com/callback
+                </td>
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968 SubscriptionTableRow-cell-1093"
+                >
+                  json
+                </td>
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968 SubscriptionTableRow-cell-1093"
+                >
+                  <span
+                    class="MuiButtonBase-root-830 MuiButtonBase-disabled-831 MuiIconButton-root-824 MuiIconButton-disabled-828 MuiPrivateSwitchBase-root-1100 MuiCheckbox-root-1094 MuiCheckbox-colorPrimary-1098 MuiPrivateSwitchBase-disabled-1102 MuiCheckbox-disabled-1096"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-829"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-833"
+                        focusable="false"
+                        role="presentation"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiPrivateSwitchBase-input-1103"
+                        data-indeterminate="false"
+                        disabled=""
+                        type="checkbox"
+                        value=""
+                      />
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968"
+                >
+                  <div>
+                    <button
+                      aria-haspopup="true"
+                      aria-label="More Options"
+                      class="MuiButtonBase-root-830 MuiIconButton-root-824"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label-829"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-833"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root-1016"
+                      />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="MuiTableRow-root-961"
+                data-testid="TableRow-Subscription-31a21e2d-7785-48dc-8510-e419247c632c"
+              >
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968 SubscriptionTableRow-cell-1093"
+                >
+                  31a21e2d-7785-48dc-8510-e419247c632c
+                </td>
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968 SubscriptionTableRow-cell-1093"
+                >
+                  ministry
+                </td>
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968 SubscriptionTableRow-cell-1093"
+                >
+                  https://www.example.com/callback
+                </td>
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968 SubscriptionTableRow-cell-1093"
+                >
+                  json
+                </td>
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968 SubscriptionTableRow-cell-1093"
+                >
+                  <span
+                    class="MuiButtonBase-root-830 MuiButtonBase-disabled-831 MuiIconButton-root-824 MuiIconButton-disabled-828 MuiPrivateSwitchBase-root-1100 MuiCheckbox-root-1094 MuiCheckbox-colorPrimary-1098 MuiPrivateSwitchBase-checked-1101 MuiCheckbox-checked-1095 MuiPrivateSwitchBase-disabled-1102 MuiCheckbox-disabled-1096"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-829"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-833"
+                        focusable="false"
+                        role="presentation"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      <input
+                        checked=""
+                        class="MuiPrivateSwitchBase-input-1103"
+                        data-indeterminate="false"
+                        disabled=""
+                        type="checkbox"
+                        value=""
+                      />
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="MuiTableCell-root-966 MuiTableCell-body-968"
+                >
+                  <div>
+                    <button
+                      aria-haspopup="true"
+                      aria-label="More Options"
+                      class="MuiButtonBase-root-830 MuiIconButton-root-824"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label-829"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-833"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root-1016"
+                      />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App valid accessToken /systems should render /systems route 1`] = `
+<div>
+  <div
+    class="App-root-1106"
+  >
+    <header
+      class="MuiPaper-root-1128 MuiPaper-elevation4-1134 MuiAppBar-root-1119 MuiAppBar-positionAbsolute-1121 MuiAppBar-colorPrimary-1126 AppFrame-appBar-1107"
+    >
+      <div
+        class="MuiToolbar-root-1155 MuiToolbar-regular-1157 AppFrame-toolbar-1109"
+      >
+        <button
+          aria-label="Open drawer"
+          class="MuiButtonBase-root-1165 MuiIconButton-root-1159 MuiIconButton-colorInherit-1160 AppFrame-menuButton-1111"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label-1164"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-1168"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root-1435"
+          />
+        </button>
+        <h1
+          class="MuiTypography-root-1177 MuiTypography-h6-1194 MuiTypography-colorInherit-1206 MuiTypography-noWrap-1203 AppFrame-title-1113"
+        >
+          Systems
+        </h1>
+        <button
+          class="MuiButtonBase-root-1165 MuiButton-root-1482 MuiButton-text-1484 MuiButton-flat-1487 AccessTokenInput-button-1213"
+          data-testid="AccessTokenInput-VIEW_MODE"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-1483"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-1168 AccessTokenInput-buttonIcon-1215"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+            <p
+              class="MuiTypography-root-1177 MuiTypography-body2-1185 MuiTypography-noWrap-1203 AccessTokenInput-label-1214"
+            >
+              api_client
+            </p>
+          </span>
+          <span
+            class="MuiTouchRipple-root-1435"
+          />
+        </button>
+      </div>
+    </header>
+    <div
+      class="MuiDrawer-root-1250 MuiDrawer-docked-1251"
+    >
+      <div
+        class="MuiPaper-root-1128 MuiPaper-elevation0-1130 MuiDrawer-paper-1252 AppFrame-drawerPaper-1114 AppFrame-drawerPaperClose-1115 MuiDrawer-paperAnchorLeft-1253 MuiDrawer-paperAnchorDockedLeft-1257"
+      >
+        <div
+          class="AppFrame-toolbarIcon-1110"
+        >
+          <button
+            class="MuiButtonBase-root-1165 MuiIconButton-root-1159"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-1164"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-1168"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-1435"
+            />
+          </button>
+        </div>
+        <hr
+          class="MuiDivider-root-1262"
+        />
+        <ul
+          class="MuiList-root-1268 MuiList-padding-1269"
+          data-testid="navigation"
+        >
+          <a
+            class="MuiButtonBase-root-1165 MuiListItem-root-1272 MuiListItem-default-1275 MuiListItem-gutters-1280 MuiListItem-button-1281"
+            data-testid="navlink-/"
+            href="/"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-1284"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-1168"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-1285"
+            >
+              <span
+                class="MuiTypography-root-1177 MuiTypography-body1-1186 MuiListItemText-primary-1288"
+              >
+                OpenAPI Spec
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-1435"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-1165 MuiListItem-root-1272 MuiListItem-default-1275 MuiListItem-gutters-1280 MuiListItem-button-1281"
+            data-testid="navlink-/entity_types"
+            href="/entity_types"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-1284"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-1168"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <defs>
+                  <path
+                    d="M0 0h24v24H0z"
+                    id="a"
+                  />
+                </defs>
+                <path
+                  clip-rule="evenodd"
+                  d="M13 9.5h5v-2h-5v2zm0 7h5v-2h-5v2zm6 4.5H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zM6 11h5V6H6v5zm1-4h3v3H7V7zM6 18h5v-5H6v5zm1-4h3v3H7v-3z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-1285"
+            >
+              <span
+                class="MuiTypography-root-1177 MuiTypography-body1-1186 MuiListItemText-primary-1288"
+              >
+                Entity Types
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-1435"
+            />
+          </a>
+          <a
+            aria-current="page"
+            class="MuiButtonBase-root-1165 MuiListItem-root-1272 MuiListItem-default-1275 MuiListItem-gutters-1280 MuiListItem-button-1281 Navigation-active-1267"
+            data-testid="navlink-/systems"
+            href="/systems"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-1284"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-1168"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.81 4.47c-.08 0-.16-.02-.23-.06C15.66 3.42 14 3 12.01 3c-1.98 0-3.86.47-5.57 1.41-.24.13-.54.04-.68-.2-.13-.24-.04-.55.2-.68C7.82 2.52 9.86 2 12.01 2c2.13 0 3.99.47 6.03 1.52.25.13.34.43.21.67-.09.18-.26.28-.44.28zM3.5 9.72c-.1 0-.2-.03-.29-.09-.23-.16-.28-.47-.12-.7.99-1.4 2.25-2.5 3.75-3.27C9.98 4.04 14 4.03 17.15 5.65c1.5.77 2.76 1.86 3.75 3.25.16.22.11.54-.12.7-.23.16-.54.11-.7-.12-.9-1.26-2.04-2.25-3.39-2.94-2.87-1.47-6.54-1.47-9.4.01-1.36.7-2.5 1.7-3.4 2.96-.08.14-.23.21-.39.21zm6.25 12.07c-.13 0-.26-.05-.35-.15-.87-.87-1.34-1.43-2.01-2.64-.69-1.23-1.05-2.73-1.05-4.34 0-2.97 2.54-5.39 5.66-5.39s5.66 2.42 5.66 5.39c0 .28-.22.5-.5.5s-.5-.22-.5-.5c0-2.42-2.09-4.39-4.66-4.39-2.57 0-4.66 1.97-4.66 4.39 0 1.44.32 2.77.93 3.85.64 1.15 1.08 1.64 1.85 2.42.19.2.19.51 0 .71-.11.1-.24.15-.37.15zm7.17-1.85c-1.19 0-2.24-.3-3.1-.89-1.49-1.01-2.38-2.65-2.38-4.39 0-.28.22-.5.5-.5s.5.22.5.5c0 1.41.72 2.74 1.94 3.56.71.48 1.54.71 2.54.71.24 0 .64-.03 1.04-.1.27-.05.53.13.58.41.05.27-.13.53-.41.58-.57.11-1.07.12-1.21.12zM14.91 22c-.04 0-.09-.01-.13-.02-1.59-.44-2.63-1.03-3.72-2.1-1.4-1.39-2.17-3.24-2.17-5.22 0-1.62 1.38-2.94 3.08-2.94 1.7 0 3.08 1.32 3.08 2.94 0 1.07.93 1.94 2.08 1.94s2.08-.87 2.08-1.94c0-3.77-3.25-6.83-7.25-6.83-2.84 0-5.44 1.58-6.61 4.03-.39.81-.59 1.76-.59 2.8 0 .78.07 2.01.67 3.61.1.26-.03.55-.29.64-.26.1-.55-.04-.64-.29-.49-1.31-.73-2.61-.73-3.96 0-1.2.23-2.29.68-3.24 1.33-2.79 4.28-4.6 7.51-4.6 4.55 0 8.25 3.51 8.25 7.83 0 1.62-1.38 2.94-3.08 2.94s-3.08-1.32-3.08-2.94c0-1.07-.93-1.94-2.08-1.94s-2.08.87-2.08 1.94c0 1.71.66 3.31 1.87 4.51.95.94 1.86 1.46 3.27 1.85.27.07.42.35.35.61-.05.23-.26.38-.47.38z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-1285"
+            >
+              <span
+                class="MuiTypography-root-1177 MuiTypography-body1-1186 MuiListItemText-primary-1288"
+              >
+                Systems
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-1435"
+            />
+          </a>
+          <a
+            class="MuiButtonBase-root-1165 MuiListItem-root-1272 MuiListItem-default-1275 MuiListItem-gutters-1280 MuiListItem-button-1281"
+            data-testid="navlink-/subscriptions"
+            href="/subscriptions"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemIcon-root-1284"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-1168"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiListItemText-root-1285"
+            >
+              <span
+                class="MuiTypography-root-1177 MuiTypography-body1-1186 MuiListItemText-primary-1288"
+              >
+                Subscriptions
+              </span>
+            </div>
+            <span
+              class="MuiTouchRipple-root-1435"
+            />
+          </a>
+        </ul>
+      </div>
+    </div>
+    <main
+      class="AppFrame-content-1116"
+    >
+      <div
+        class="AppFrame-appBarSpacer-1117"
+      />
+      <div
+        class="PageFrame-root-1291"
+      >
+        <div
+          class="MuiGrid-container-1294 MuiGrid-spacing-xs-16-1317 SystemsTable-grid-1292"
+        >
+          <div
+            class="MuiGrid-item-1295 MuiGrid-grid-xs-true-1322"
+          >
+            <p
+              class="MuiTypography-root-1177 MuiTypography-body2-1185 SystemsTable-margin-1293"
+            >
+              A system (in global registry) is any external system accessing the global registry. If your are running a multi-site portal, you should probably use a different access_token for each site. This allows us to track where the data came from. Some systems have root access, allowing access to advanced administration options. These should not by used for regular data entry. If you believe that your access_token has been compromised, please reset it immediately.
+            </p>
+          </div>
+          <div
+            class="MuiGrid-item-1295"
+          >
+            <button
+              class="MuiButtonBase-root-1165 MuiFab-root-1516 MuiFab-secondary-1519 MuiFab-sizeMedium-1525 SystemsTable-margin-1293"
+              tabindex="0"
+              title="Add new System"
+              type="button"
+            >
+              <span
+                class="MuiFab-label-1517"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-1168"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root-1435"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiPaper-root-1128 MuiPaper-elevation2-1132 MuiPaper-rounded-1129"
+        >
+          <table
+            class="MuiTable-root-1391"
+          >
+            <thead
+              class="MuiTableHead-root-1392"
+            >
+              <tr
+                class="MuiTableRow-root-1393 MuiTableRow-head-1396"
+              >
+                <th
+                  class="MuiTableCell-root-1398 MuiTableCell-head-1399"
+                  scope="col"
+                >
+                  Trust
+                </th>
+                <th
+                  class="MuiTableCell-root-1398 MuiTableCell-head-1399"
+                  scope="col"
+                >
+                  ID
+                </th>
+                <th
+                  class="MuiTableCell-root-1398 MuiTableCell-head-1399"
+                  scope="col"
+                >
+                  Name
+                </th>
+                <th
+                  class="MuiTableCell-root-1398 MuiTableCell-head-1399"
+                  scope="col"
+                >
+                  Is Root?
+                </th>
+                <th
+                  class="MuiTableCell-root-1398 MuiTableCell-head-1399"
+                  scope="col"
+                >
+                  AccessToken
+                </th>
+                <th
+                  class="MuiTableCell-root-1398 MuiTableCell-head-1399"
+                  scope="col"
+                />
+              </tr>
+            </thead>
+            <tbody
+              class="MuiTableBody-root-1410"
+            >
+              <tr
+                class="MuiTableRow-root-1393"
+                data-testid="TableRow-System-f456d0c4-5bbf-11e9-bca9-784f4350fb53"
+              >
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <div
+                    class="SystemTableRow-wrapper-1526"
+                  >
+                    <span
+                      class="MuiButtonBase-root-1165 MuiIconButton-root-1159 MuiPrivateSwitchBase-root-1537 MuiCheckbox-root-1531 MuiCheckbox-colorPrimary-1535 MuiPrivateSwitchBase-checked-1538 MuiCheckbox-checked-1532"
+                    >
+                      <span
+                        class="MuiIconButton-label-1164"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-1168"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          />
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                        </svg>
+                        <input
+                          class="MuiPrivateSwitchBase-input-1540"
+                          data-indeterminate="false"
+                          type="checkbox"
+                          value=""
+                        />
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root-1435"
+                      />
+                    </span>
+                  </div>
+                </td>
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <p
+                    class="MuiTypography-root-1177 MuiTypography-body2-1185"
+                  >
+                    f456d0c4-5bbf-11e9-bca9-784f4350fb53
+                  </p>
+                  <p
+                    class="MuiTypography-root-1177 MuiTypography-body2-1185 MuiTypography-colorTextSecondary-1210"
+                  >
+                    global
+                  </p>
+                </td>
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <p
+                    class="MuiTypography-root-1177 MuiTypography-body2-1185"
+                  >
+                    Global
+                  </p>
+                  <p
+                    class="MuiTypography-root-1177 MuiTypography-body2-1185 MuiTypography-colorTextSecondary-1210"
+                  >
+                     
+                  </p>
+                </td>
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <div
+                    class="SystemTableRow-wrapper-1526"
+                  >
+                    <span
+                      class="MuiButtonBase-root-1165 MuiIconButton-root-1159 MuiPrivateSwitchBase-root-1537 MuiCheckbox-root-1531 MuiCheckbox-colorPrimary-1535"
+                    >
+                      <span
+                        class="MuiIconButton-label-1164"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-1168"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                          />
+                        </svg>
+                        <input
+                          class="MuiPrivateSwitchBase-input-1540"
+                          data-indeterminate="false"
+                          type="checkbox"
+                          value=""
+                        />
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root-1435"
+                      />
+                    </span>
+                  </div>
+                </td>
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <button
+                    class="MuiButtonBase-root-1165 MuiButton-root-1482 MuiButton-text-1484 MuiButton-flat-1487 SystemTableRow-button-1529"
+                    tabindex="0"
+                    title="Copy to Clipboard"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label-1483"
+                    >
+                      dc4173••••••
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-1435"
+                    />
+                  </button>
+                </td>
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <div>
+                    <button
+                      aria-haspopup="true"
+                      aria-label="More Options"
+                      class="MuiButtonBase-root-1165 MuiIconButton-root-1159"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label-1164"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-1168"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root-1435"
+                      />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="MuiTableRow-root-1393"
+                data-testid="TableRow-System-0bcf27d6-5bc2-11e9-b547-784f4350fb53"
+              >
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <div
+                    class="SystemTableRow-wrapper-1526"
+                  >
+                    <span
+                      class="MuiButtonBase-root-1165 MuiIconButton-root-1159 MuiPrivateSwitchBase-root-1537 MuiCheckbox-root-1531 MuiCheckbox-colorPrimary-1535"
+                    >
+                      <span
+                        class="MuiIconButton-label-1164"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-1168"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                          />
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                        </svg>
+                        <input
+                          class="MuiPrivateSwitchBase-input-1540"
+                          data-indeterminate="false"
+                          type="checkbox"
+                          value=""
+                        />
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root-1435"
+                      />
+                    </span>
+                  </div>
+                </td>
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <p
+                    class="MuiTypography-root-1177 MuiTypography-body2-1185"
+                  >
+                    0bcf27d6-5bc2-11e9-b547-784f4350fb53
+                  </p>
+                  <p
+                    class="MuiTypography-root-1177 MuiTypography-body2-1185 MuiTypography-colorTextSecondary-1210"
+                  />
+                </td>
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <p
+                    class="MuiTypography-root-1177 MuiTypography-body2-1185"
+                  >
+                    api_client
+                  </p>
+                  <p
+                    class="MuiTypography-root-1177 MuiTypography-body2-1185 MuiTypography-colorTextSecondary-1210"
+                  >
+                     
+                  </p>
+                </td>
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <div
+                    class="SystemTableRow-wrapper-1526"
+                  >
+                    <span
+                      class="MuiButtonBase-root-1165 MuiIconButton-root-1159 MuiPrivateSwitchBase-root-1537 MuiCheckbox-root-1531 MuiCheckbox-colorPrimary-1535 MuiPrivateSwitchBase-checked-1538 MuiCheckbox-checked-1532"
+                    >
+                      <span
+                        class="MuiIconButton-label-1164"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-1168"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                          />
+                        </svg>
+                        <input
+                          checked=""
+                          class="MuiPrivateSwitchBase-input-1540"
+                          data-indeterminate="false"
+                          type="checkbox"
+                          value=""
+                        />
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root-1435"
+                      />
+                    </span>
+                  </div>
+                </td>
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <button
+                    class="MuiButtonBase-root-1165 MuiButton-root-1482 MuiButton-text-1484 MuiButton-flat-1487 SystemTableRow-button-1529"
+                    tabindex="0"
+                    title="Copy to Clipboard"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label-1483"
+                    >
+                      abc123••••••
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-1435"
+                    />
+                  </button>
+                </td>
+                <td
+                  class="MuiTableCell-root-1398 MuiTableCell-body-1400 SystemTableRow-cell-1530"
+                >
+                  <div>
+                    <button
+                      aria-haspopup="true"
+                      aria-label="More Options"
+                      class="MuiButtonBase-root-1165 MuiIconButton-root-1159"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label-1164"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-1168"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root-1435"
+                      />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;

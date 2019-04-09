@@ -17,8 +17,8 @@ import MenuItem from '@material-ui/core/MenuItem'
 import CircularProgress from '@material-ui/core/CircularProgress/CircularProgress'
 
 import { connect } from 'react-redux'
-import { bindPromiseActionCreators, createEntityType, updateEntityType } from '../../redux/actions'
-import { entityTypeSelectorFactory } from '../../redux/selectors/entityTypeSelectors'
+import { bindPromiseActionCreators, createEntityType, updateEntityType } from '../../actions'
+import { entityTypeSelectorFactory } from '../../selectors/entityTypeSelectors'
 import isEmpty from 'lodash/isEmpty'
 
 const styles = theme => ({

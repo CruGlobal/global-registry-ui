@@ -15,7 +15,7 @@ import CircularProgress from '@material-ui/core/CircularProgress/CircularProgres
 import { connect } from 'react-redux'
 import isEmpty from 'lodash/isEmpty'
 import find from 'lodash/find'
-import { bindPromiseActionCreators, createSystem, updateSystem } from '../../redux/actions'
+import { bindPromiseActionCreators, createSystem, updateSystem } from '../../actions'
 
 const styles = theme => ({
   form: {
