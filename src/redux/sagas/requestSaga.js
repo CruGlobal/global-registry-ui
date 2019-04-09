@@ -3,7 +3,8 @@ import { normalize } from 'normalizr'
 import {
   REQUEST_START,
   REQUEST_END,
-  REQUEST_ERROR, USER_LOGIN_SUCCESS
+  REQUEST_ERROR,
+  USER_LOGIN_SUCCESS
 } from '../actionTypes'
 import GlobalRegistryClient, { clientOptions } from '../../global-registry/global-registry-client'
 

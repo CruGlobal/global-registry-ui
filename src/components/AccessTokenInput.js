@@ -99,16 +99,10 @@ class AccessTokenInput extends Component {
   }
 
   componentDidMount () {
-    const { accessToken, system, userLogin } = this.props
+    const { accessToken } = this.props
     this.setState({
       mode: accessToken ? VIEW_MODE : EDIT_MODE
     })
-
-    if (accessToken && isEmpty(system)) {
-      // We have an accessToken, but not a system. Try logging in.
-      // Send current pathname to stay at the same location, otherwise react-admin will redirect to the dashboard
-      userLogin(accessToken)
-    }
   }
 
   componentWillReceiveProps (nextProps, _nextContext) {
