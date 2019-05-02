@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import AppFrame from './components/layout/AppFrame'
 import routes from './routes'
@@ -55,6 +55,7 @@ App.propTypes = {
 }
 
 export default compose(
+  withRouter,
   connect(null, {applicationInit}),
   withStyles(styles)
 )(App)
