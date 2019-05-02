@@ -43,16 +43,15 @@ paths:
                       $ref: '#/components/schemas/System'
         '401':
           $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/UnknownError'
     post:
       summary: Create new System
       operationId: createSystem
       tags:
         - systems
       parameters:
-        - name: full_response
-          in: query
-          schema:
-            type: boolean
+        - $ref: '#/components/parameters/fullResponseParam'
       requestBody:
         required: true
         content:
@@ -72,35 +71,26 @@ paths:
                 properties:
                   system:
                     $ref: '#/components/schemas/System'
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  system:
-                    $ref: '#/components/schemas/System'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
           $ref: '#/components/responses/Unauthorized'
-        '404':
-          $ref: '#/components/responses/NotFound'
+        default:
+          $ref: '#/components/responses/UnknownError'
 
   '/systems/{id}':
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+          format: uuid
     get:
       summary: Info for a specific System
       operationId: getSystem
       tags:
         - systems
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-            format: uuid
       responses:
         '200':
           description: OK
@@ -113,22 +103,16 @@ paths:
                     $ref: '#/components/schemas/System'
         '401':
           $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/UnknownError'
+
     put:
       summary: Update a specific System
       operationId: updateSystem
       tags:
         - systems
       parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-            format: uuid
-        - name: full_response
-          in: query
-          schema:
-            type: boolean
+        - $ref: '#/components/parameters/fullResponseParam'
       requestBody:
         required: true
         content:
@@ -148,18 +132,16 @@ paths:
                 properties:
                   system:
                     $ref: '#/components/schemas/System'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
     delete:
       summary: Delete a specific System
       operationId: deleteSystem
       tags:
         - systems
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-            format: uuid
       responses:
         '200':
           description: OK
@@ -176,6 +158,10 @@ paths:
                         format: uuid
         '401':
           $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+
   /systems/reset_access_token:
     post:
       summary: Reset a Systems Access Token
@@ -448,6 +434,7 @@ paths:
           $ref: '#/components/responses/BadRequest'
         '401':
           $ref: '#/components/responses/Unauthorized'
+
   '/measurement_types/{id}':
     put:
       summary: Update a specific Measurement Type
@@ -592,10 +579,7 @@ paths:
       tags:
         - trust_relationships
       parameters:
-        - name: full_response
-          in: query
-          schema:
-            type: boolean
+        - $ref: '#/components/parameters/fullResponseParam'
       requestBody:
         required: true
         content:
@@ -677,10 +661,7 @@ paths:
       tags:
         - subscriptions
       parameters:
-        - name: full_response
-          in: query
-          schema:
-            type: boolean
+        - $ref: '#/components/parameters/fullResponseParam'
       requestBody:
         required: true
         content:
@@ -748,7 +729,24 @@ components:
       in: query
       name: access_token
 
+  parameters:
+    fullResponseParam:
+      in: query
+      name: full_response
+      schema:
+        type: boolean
+        default: false
+
   responses:
+    UnknownError:
+      description: Unknown Error
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
     Unauthorized:
       description: Unauthorized
       content:
@@ -769,6 +767,15 @@ components:
                 type: string
     NotFound:
       description: Not Found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+    Forbidden:
+      description: Forbidden
       content:
         application/json:
           schema:
