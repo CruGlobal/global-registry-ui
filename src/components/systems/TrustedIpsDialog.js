@@ -64,7 +64,7 @@ class TrustedIpsDialog extends React.Component {
     this.props.onClose()
   }
 
-  handleBeforeAdd = chip => chip.match(/^([0-9]{1,3}\.){3}[0-9]{1,3}$/i) !== null
+  handleBeforeAdd = chip => chip.match(/^(\d{1,3}\.){3}\d{1,3}(\/\d{1,2})?$/i) !== null
 
   handleAdd = chip => {
     this.setState(state => {
