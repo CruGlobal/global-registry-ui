@@ -47,12 +47,15 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: ${{ (github.ref == 'refs/heads/master' && 'prod') || 'stage' }}
-    needs: build
+    # needs: build
     permissions:
       id-token: write
       contents: read
 
     steps:
+      - name: Debug
+        run: echo ${{ secrets.GLOBAL_REGISTRY_BASE_URL }}
+
       - name: Repository checkout
         uses: actions/checkout@v4
 
