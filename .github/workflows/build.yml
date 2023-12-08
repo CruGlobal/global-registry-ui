@@ -46,7 +46,7 @@ jobs:
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/staging')
     runs-on: ubuntu-latest
     environment:
-      name: ${{ (github.ref == 'refs/heads/master' && 'prod') || 'stage' }}
+      name: ${{ (github.ref == 'refs/heads/master' && 'production') || 'staging' }}
     # needs: build
     permissions:
       id-token: write
