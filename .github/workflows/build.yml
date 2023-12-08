@@ -48,9 +48,9 @@ jobs:
     environment:
       name: ${{ (github.ref == 'refs/heads/master' && 'production') || 'staging' }}
     # needs: build
-    permissions:
-      id-token: write
-      contents: read
+    # permissions:
+    #   id-token: write
+    #   contents: read
 
     steps:
       - name: Debug
@@ -81,6 +81,6 @@ jobs:
           aws-region: us-east-1
           role-to-assume: ${{ secrets.AWS_GITHUB_ACTIONS_ROLE }}
 
-      - name: Deploy to s3
+      - name: Deploy to S3
         run: |
           aws s3 sync build/ s3://${{ secrets.AWS_S3_BUCKET }} --acl 'public-read' --cache-control 'max-age=300' --delete --dryrun
