@@ -37,6 +37,8 @@ jobs:
 
       - name: 🏗️ Build app
         run: yarn build
+        env:
+          REACT_APP_GLOBAL_REGISTRY_BASE_URL: ${{ secrets.GLOBAL_REGISTRY_BASE_URL }}
 
       - name: Upload Codecov Reports
         uses: codecov/codecov-action@v3
@@ -83,4 +85,6 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync build/ s3://${{ secrets.AWS_S3_BUCKET }} --acl 'public-read' --cache-control 'max-age=300' --delete
+          aws s3 sync build s3://${{ secrets.AWS_S3_BUCKET }} --region us-east-1 --acl 'public-read' --cache-control 'max-age=300'
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+          aws s3 sync build s3://${{ secrets.AWS_S3_BUCKET }} --region us-east-1 --acl 'public-read' --cache-control 'max-age=300' --delete
