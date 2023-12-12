@@ -19,6 +19,8 @@ jobs:
   build:
     name: Checks, Tests, & Build
     runs-on: ubuntu-latest
+    environment:
+      name: ${{ (github.ref == 'refs/heads/master' && 'production') || 'staging' }}
 
     steps:
       - name: Repository checkout
