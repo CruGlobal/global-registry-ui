@@ -759,28 +759,7 @@ exports[`App should render dashboard 1`] = `
         <div
           data-testid="openapi-layout"
           id="swaggerContainer"
-        >
-          <div
-            class="swagger-ui"
-            data-reactroot=""
-          >
-            <div
-              class="loading-container"
-            >
-              <div
-                class="info"
-              >
-                <div
-                  class="loading-container"
-                >
-                  <div
-                    class="loading"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        />
       </div>
     </main>
   </div>

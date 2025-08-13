@@ -6,7 +6,7 @@ import {
   stubGetSubscriptions,
   stubGetSystems,
 } from '../testUtils';
-import { waitForElement } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import { ACCESS_TOKEN } from '../constants';
 import App from '../App';
 
@@ -32,7 +32,7 @@ describe('App', () => {
       const { container, getByTestId } = renderHelper(<App />, {
         route: '/entity_types',
       });
-      await waitForElement(() => getByTestId('snackbar-userLogin-error'));
+      await waitFor(() => getByTestId('snackbar-userLogin-error'));
 
       expect(mockClient.getSystem).toHaveBeenCalled();
       expect(container).toMatchSnapshot();
@@ -48,11 +48,11 @@ describe('App', () => {
     describe('/entity_types', () => {
       beforeEach(stubGetEntityTypes);
       it('should render /entity_types route', async () => {
-        const { container, getByTestId, getAllByTestId } = renderHelper(
+        const { container, getAllByTestId } = renderHelper(
           <App />,
           { route: '/entity_types' }
         );
-        await waitForElement(() => getByTestId(/navlink-EntityType-.*/));
+        await waitFor(() => getAllByTestId(/navlink-EntityType-.*/));
 
         expect(getAllByTestId(/navlink-EntityType-.*/)).toHaveLength(5); // 5 root entity types
         expect(container).toMatchSnapshot();
@@ -63,11 +63,11 @@ describe('App', () => {
     describe('/subscriptions', () => {
       beforeEach(stubGetSubscriptions);
       it('should render /subscriptions route', async () => {
-        const { container, getByTestId, getAllByTestId } = renderHelper(
+        const { container, getAllByTestId } = renderHelper(
           <App />,
           { route: '/subscriptions' }
         );
-        await waitForElement(() => getByTestId(/TableRow-Subscription-.*/));
+        await waitFor(() => getAllByTestId(/TableRow-Subscription-.*/));
 
         expect(getAllByTestId(/TableRow-Subscription-.*/)).toHaveLength(2);
         expect(container).toMatchSnapshot();
@@ -79,11 +79,11 @@ describe('App', () => {
     describe('/systems', () => {
       beforeEach(stubGetSystems);
       it('should render /systems route', async () => {
-        const { container, getByTestId, getAllByTestId } = renderHelper(
+        const { container, getAllByTestId } = renderHelper(
           <App />,
           { route: '/systems' }
         );
-        await waitForElement(() => getByTestId(/TableRow-System-.*/));
+        await waitFor(() => getAllByTestId(/TableRow-System-.*/));
 
         expect(getAllByTestId(/TableRow-System-.*/)).toHaveLength(2);
         expect(container).toMatchSnapshot();

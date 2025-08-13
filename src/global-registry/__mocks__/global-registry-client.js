@@ -28,5 +28,6 @@ const operationsIds = [
 ]
 operationsIds.forEach(operationId => mockClient[operationId] = jest.fn().mockName(operationId))
 
+export const OpenAPISpec = '/global-registry.yml'
 export const GlobalRegistryClient = Promise.resolve(mockClient)
 export default GlobalRegistryClient
