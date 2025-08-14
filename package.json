@@ -46,6 +46,9 @@
       "fixturesRoot": true
     }
   },
+  "resolutions": {
+    "@babel/core": "^7.28.0"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
