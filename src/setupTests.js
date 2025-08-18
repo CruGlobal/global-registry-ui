@@ -1,15 +1,15 @@
-import { cleanup } from 'react-testing-library'
-import 'jest-dom/extend-expect'
+import { cleanup } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
-const path = require('path')
+const path = require('path');
 
-global.projectRoot = path.resolve(__dirname, '..')
-global.publicRoot = path.resolve(__dirname, '../public')
-global.fixturesRoot = path.resolve(__dirname, './__fixtures__')
+global.projectRoot = path.resolve(__dirname, '..');
+global.publicRoot = path.resolve(__dirname, '../public');
+global.fixturesRoot = path.resolve(__dirname, './__fixtures__');
 
-jest.mock('./global-registry/global-registry-client')
+jest.mock('./global-registry/global-registry-client');
 
 afterEach(() => {
-  cleanup()
-  jest.clearAllMocks()
-})
+  cleanup();
+  jest.clearAllMocks();
+});

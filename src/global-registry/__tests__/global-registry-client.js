@@ -1,7 +1,5 @@
 import { GlobalRegistryClient, OpenAPISpec } from '../global-registry-client'
 
-jest.unmock('../global-registry-client')
-
 describe('OpenAPISpec', () => {
   it('is defined', () => {
     expect(OpenAPISpec).toBeDefined()
